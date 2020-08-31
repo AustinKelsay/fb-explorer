@@ -9,7 +9,12 @@ body {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
   height: 100%;
-  width: 100%;
-  text-align: center;
+  font-family: Inconsolata, monospace;
+  color: #d7d6d6;
 }

@@ -1,0 +1,113 @@
+/* SideBar */
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 10%;
+    height: 98%;
+    margin: 0.3% auto;
+    background-color: #5d5e60;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5%;
+    padding-right: 0.6%;
+} 
+
+.data-category {
+    cursor: pointer;
+    background: #4b3f72;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    margin: 3% auto;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.icon {
+    margin-top: 5%;
+}
+
+.data-category:hover{
+    background-color: #6495ED;
+    border: 1px solid black;
+}
+
+.active {
+    background-color: #6495ED;
+    cursor: pointer;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    margin: 3% auto;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.data-category-text {
+    margin: 5% auto;
+}
+
+
+.infinite-scroll-category::-webkit-scrollbar {
+    background-color: #aaa;
+    transition: background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;
+    width: 0.4rem;
+}
+
+/* parent container */
+
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+}
+
+/* child container */
+
+.child-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 89.9%;
+    height: 100%;
+}
+
+/* dashboard */
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4.25%;
+    width: 85%;
+    height: 90%;
+    margin-top: 2%;
+    border: 2px solid #d7d6d6;
+    color: black;
+
+    background-color: #5d5e60;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+/* nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
+    height: 10%;
+    background: #5d5e60;
+    border: 1px solid #d7d6d6;
+    border-top: none;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 5px 5px;
+}

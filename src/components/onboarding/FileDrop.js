@@ -5,7 +5,7 @@ import {GET_USER_DATA, GET_USER_NAME, GET_JUNK_DATA, SHOW_DATA} from "../../stor
 import './onboarding.css'
 
 
-const FileDrop = () => {
+const FileDrop = (props) => {
 
     const dispatch = useDispatch()
 
@@ -43,6 +43,7 @@ const FileDrop = () => {
         e.preventDefault()
         dispatch({type: GET_USER_NAME})
         dispatch({type: SHOW_DATA})
+        props.history.push('/explorer')
     }
 
     return(
