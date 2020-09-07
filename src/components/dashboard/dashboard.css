@@ -14,6 +14,10 @@
     padding-right: 0.6%;
 } 
 
+.infinite-scroll-component__outerdiv .infinite-scroll-category {
+    padding: 2%;
+}
+
 .data-category {
     cursor: pointer;
     background: #4b3f72;
@@ -29,6 +33,7 @@
 
 .icon {
     margin-top: 5%;
+    font-size: 2rem;
 }
 
 .data-category:hover{
@@ -65,8 +70,10 @@
 .parent-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 98%;
     height: 90%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 /* child container */
@@ -75,13 +82,23 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 89.9%;
+    width: 89%;
     height: 100%;
 }
 
-/* dashboard */
+.infinite-scroll-component__outerdiv {
+    width: 96%;
+    height: 100%;
+    background-color: #8d8d92;
 
-.dashboard {
+    margin: 2%;
+    margin-right: 0%;
+    border: 1px solid black;
+    border-radius: 5px; 
+    box-shadow: 0px 10px 13px -7px #000000
+}
+
+.infinite-scroll-component .infinite-scroll {
     display: flex;
     flex-direction: row;
     margin-left: 4.25%;
@@ -97,8 +114,45 @@
     border-radius: 5px;
 }
 
+/* dashboard */
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.25%;
+    width: 90%;
+    margin-top: 2%;
+    border: 2px solid #d7d6d6;
+    color: black;
+
+    background-color: #5d5e60;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.dashboard-empty {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.25%;
+    width: 90%;
+    height: 90%;
+    margin-top: 2%;
+    border: 2px solid #d7d6d6;
+    color: black;
+
+    background-color: #5d5e60;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.dashboard-empty-message {
+    margin: 10% auto;
+}
+
 /* nav */
-.nav {
+.Nav {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -110,4 +164,33 @@
     box-sizing: border-box;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 5px 5px;
+}
+
+.nav-header{
+    margin: 2%;
+    font-size: 1.9rem;
+    font-weight: 400;
+    background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.master-search-container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 3%;
+    margin-right: 3%;
+}
+
+.master-search-container p {
+    margin-top: 0%;
+    font-size: 0.8rem;
+}
+
+.nav-checkbox{
+    margin: 5%;
+    margin-right: 10%;
 }

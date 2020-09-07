@@ -19,9 +19,7 @@ const Login = () => {
           <br/>
           <div className="login-info">
             <h3>2: Download your Facebook data by clicking the button below (choose .json format)</h3>
-            <a href="https://www.facebook.com/dyi/?x=AdkadZSUMBkpk0EF&referrer=yfi_settings" target="_blank">
-                <button>Download Data</button>
-            </a>
+                <a className='download-button' href="https://www.facebook.com/dyi/?x=AdkadZSUMBkpk0EF&referrer=yfi_settings" blank='none'>Download Data</a>
           </div>
         </div>
     )

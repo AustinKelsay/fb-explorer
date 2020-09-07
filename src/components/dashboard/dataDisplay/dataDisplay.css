@@ -1,0 +1,64 @@
+/* DataDisplay */
+
+.data-cards {
+    text-align: center;
+    margin: 3%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.data-cards h5 {
+    
+    color: #4b3f72;
+    margin: 1%;
+    margin-bottom: 3%;
+}
+
+.data-cards-expanded {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    margin-top: -3%;
+}
+
+.show{
+    width: 100%;
+}
+
+.dropdown-item{
+    white-space: normal;
+    margin: 0%;
+}
+
+.dropdown-item a{
+    white-space: normal;
+    margin: 0%;
+}
+
+.dropdown-header{
+    white-space: normal;
+    margin: 0%;
+}
+
+.dropdown-toggle {
+    margin: 3%;
+}
+
+.infinite-scroll-menu{
+    width: 100%;
+}
+
+/* ImageData */
+
+.image-container {
+    padding: 1%;
+    width: 99%;
+    height: 99%;
+    overflow: scroll;
+}
+
+.image-container img {
+    width: 70%;
+    height: auto;
+}

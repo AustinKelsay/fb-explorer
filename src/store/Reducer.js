@@ -121,7 +121,7 @@ export function Reducer (state = initialState, action) {
                     your_address_books: state.user_data['your_address_books.json']
                 }
             } 
-            }
+        }
             if(action.payload === 2)
             return{...state, active_data_type: {
                 ads_and_businesses: {
@@ -326,6 +326,7 @@ export function Reducer (state = initialState, action) {
             }
             }
         }
+        break
         default: return state;
     }
 }

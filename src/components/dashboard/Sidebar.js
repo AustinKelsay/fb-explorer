@@ -3,11 +3,12 @@ import InfiniteScroll from "react-infinite-scroll-component"
 import { useSelector, useDispatch } from 'react-redux'
 import "./dashboard.css"
 import {FaRegUser, FaBuilding, FaDesktop, FaMailBulk, FaImages, FaComments, FaCalendarWeek, FaUsers, FaUserFriends, FaProjectDiagram,
-     FaThumbsUp, FaMapMarkedAlt, FaMoneyBillWave, FaCommentDots, FaAlignCenter, FaNewspaper, FaDownload, FaUserCircle, FaShoppingCart, FaSearch, FaLock, FaBookOpen, FaThumbtack } from 'react-icons/fa';
+     FaThumbsUp, FaMapMarkedAlt, FaMoneyBillWave, FaCommentDots, FaAlignCenter, FaNewspaper, FaDownload, FaUserCircle, FaShoppingCart, 
+     FaSearch, FaLock, FaBookOpen, FaThumbtack } from 'react-icons/fa';
 import { SET_DATA_TYPE } from "../../store/Actions";
 
 const Sidebar = () => {
-    const [active, setActive] = useState(1)
+    const [active, setActive] = useState(0)
     const dispatch = useDispatch()
 
     const handleClick = (num) => {
