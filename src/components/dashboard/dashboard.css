@@ -82,8 +82,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+<<<<<<< HEAD
     width: 89%;
     height: 100%;
+=======
+    width: 88%;
+    height: 88%;
+>>>>>>> 702cc1f267bc710fa8ee4bd8f496745b3a7fd827
 }
 
 .infinite-scroll-component__outerdiv {
@@ -92,6 +97,10 @@
     background-color: #8d8d92;
 
     margin: 2%;
+<<<<<<< HEAD
+=======
+    padding-bottom: 2%;
+>>>>>>> 702cc1f267bc710fa8ee4bd8f496745b3a7fd827
     margin-right: 0%;
     border: 1px solid black;
     border-radius: 5px; 
@@ -122,13 +131,22 @@
     margin-left: 4.25%;
     width: 90%;
     margin-top: 2%;
+<<<<<<< HEAD
     border: 2px solid #d7d6d6;
     color: black;
+=======
+    color: black;
+    border: 2px solid #d7d6d6;
+    border-radius: 5px;
+>>>>>>> 702cc1f267bc710fa8ee4bd8f496745b3a7fd827
 
     background-color: #5d5e60;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+>>>>>>> 702cc1f267bc710fa8ee4bd8f496745b3a7fd827
 }
 
 .dashboard-empty {

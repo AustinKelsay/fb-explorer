@@ -42,6 +42,7 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
+<<<<<<< HEAD
         try {
             dispatch({type: GET_USER_NAME})
             dispatch({type: SHOW_DATA})
@@ -49,6 +50,10 @@ const FileDrop = (props) => {
         catch (e) {
             console.log(e)
         }
+=======
+        dispatch({type: GET_USER_NAME})
+        dispatch({type: SHOW_DATA})
+>>>>>>> 702cc1f267bc710fa8ee4bd8f496745b3a7fd827
         props.history.push('/explorer')
     }
 
