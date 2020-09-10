@@ -1,15 +1,18 @@
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 #root {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .App {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  font-family: Inconsolata, monospace;
+  color: #d7d6d6;
 }

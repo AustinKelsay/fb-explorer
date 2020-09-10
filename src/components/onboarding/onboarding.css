@@ -1,20 +1,48 @@
 /* Login */
 
 .Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100vw;
-    margin: 5% auto;
+    height: 50%;
+    margin: 3% auto;
+    margin-bottom: 0%;
 }
 
 .Login h3 {
     margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login-info {
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .fb-login-button {
-    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 3% auto;
+}
+
+.download-button {
+    width: 10%;
+    margin: 1% auto;
+    padding: 0.3%;
+    background-color: #4b3f72;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Filedrop */
@@ -22,6 +50,30 @@
 .file-drop {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.file-drop button {
+    width: 10%;
+    margin: 1% auto;
+    padding: 0.3%;
+    background-color: #4b3f72;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.file-drop h3 {
+    margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .file-box {
@@ -29,4 +81,10 @@
     height: 40%;
     width: 60%;
     border: 2px dashed black;
+}
+
+.icon-file-drop {
+    display: flex;
+    margin: 5% auto;
+    font-size: 3.5rem;
 }
