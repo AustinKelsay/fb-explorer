@@ -112,7 +112,6 @@ export function Reducer (state = initialState, action) {
             return {...state, query: action.payload};
         }
         case SET_DATA_TYPE: {
-            console.log(state.active_data_type)
             if(action.payload === 1)
             return{...state, active_data_type: {
                 about_you: {
