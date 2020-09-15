@@ -11,6 +11,7 @@ MVP:
 - [ ] Compress the data cards down with a dropdown that holds all of the relevant information for a given piece of data (timestamp, comment, author, etc)
 - [ ] User can filter through data by date/length
 - [ ] User can search through data values
+- [ ] Make the app fully responsive
 
 Features beyond MVP:
 - [ ] Master search for values across categories
