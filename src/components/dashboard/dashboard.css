@@ -152,6 +152,10 @@
     margin: 10% auto;
 }
 
+.subcategory {
+    margin: 1%;
+}
+
 /* nav */
 .Nav {
     display: flex;

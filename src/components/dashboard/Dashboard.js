@@ -13,41 +13,46 @@ const Dashboard = () => {
     const keyMatcher = () => {
         
     }
-    
-    let masterKey = ''
 
-    const dataParser = (object) => {
+    let parentKey = ''
+
+    const dataParser = (object, masterKey) => {
         return(
-            Object.entries(object).map(([key, value]) => {
+                Object.entries(object).map(([key, value]) => {
 
-                //Check to see if the key is NaN
-                if (isNaN(key)) {
-                    masterKey = key
-                    console.log(masterKey)
-                }
-                if(typeof value == 'object') {
-                    return dataParser(value);
-                }
-                
-                else if (Array.isArray(value)) {
-                        return value.map((item) => {
-                            return(
-                                <DataCards mk={masterKey} k={key} value={item}  />
-                            )
-                        });
+                    //Check to see if the key is NaN
+                    if (isNaN(key)) {
+                        parentKey = key
                     }
-                
-                    else if (typeof value == 'number' || typeof value == 'string') {
-                    return(
-                        <DataCards mk={masterKey} k={key} value={value}  />
-                        )
+                    if(typeof value == 'object') {
+                        return dataParser(value, masterKey);
                     }
                     
-                    else if (typeof value == 'undefined') {
-                        return null
-                    }
-                    else return dataParser(value)
-            })
+                    else if (Array.isArray(value)) {
+                            return value.map((item) => {
+                                return(
+                                    <div className='dashboard'>
+                                        <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                        <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={item}  />
+                                    </div>
+                                )
+                            });
+                        }
+                    
+                        else if (typeof value == 'number' || typeof value == 'string') {
+                        return(
+                            <div className='dashboard'>
+                                <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={value}  />
+                            </div>
+                            )
+                        }
+                        
+                        else if (typeof value == 'undefined') {
+                            return null
+                        }
+                        else return dataParser(value, masterKey)
+                })
             )
         }
         
@@ -64,13 +69,7 @@ return(
                 })
             }
             else if (typeof value === 'object') {
-                return (
-                    <div className='dashboard'>
-                    {
-                        dataParser(activeData) 
-                    }
-                    </div>
-                )
+                return dataParser(activeData, key) 
             }
         })
         :   
