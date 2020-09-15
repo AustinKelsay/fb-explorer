@@ -4,27 +4,42 @@ import { useSelector } from 'react-redux'
 import './dashboard.css'
 
 const Dashboard = () => {
-    const activeData = useSelector(state => state.active_data_type)
+    const activeData = useSelector(state => Object.entries(state.active_data_type).map(([key, value]) => {
+        return value
+    }))
+    console.log(activeData[0])
+    
+    // This function returns the correct key to pass into DataCards
+    const keyMatcher = () => {
+        
+    }
+    
+    let masterKey = ''
 
     const dataParser = (object) => {
         return(
             Object.entries(object).map(([key, value]) => {
+
                 //Check to see if the key is NaN
+                if (isNaN(key)) {
+                    masterKey = key
+                    console.log(masterKey)
+                }
                 if(typeof value == 'object') {
                     return dataParser(value);
                 }
                 
-                else if (Array.isArray(value) && NaN(key)) {
+                else if (Array.isArray(value)) {
                         return value.map((item) => {
                             return(
-                                <DataCards k={key} value={item}  />
+                                <DataCards mk={masterKey} k={key} value={item}  />
                             )
                         });
                     }
                 
                     else if (typeof value == 'number' || typeof value == 'string') {
                     return(
-                        <DataCards k={key} value={value}  />
+                        <DataCards mk={masterKey} k={key} value={value}  />
                         )
                     }
                     
@@ -38,9 +53,9 @@ const Dashboard = () => {
         
 
 return(
-        Object.keys(activeData).length 
+        activeData[0] && Object.keys(activeData[0]).length 
         ?
-        Object.entries(activeData).map(([key, value]) => {
+        Object.entries(activeData[0]).map(([key, value]) => {
             if(Array.isArray(value)){
                 return value.map((item) => {
                     return(
