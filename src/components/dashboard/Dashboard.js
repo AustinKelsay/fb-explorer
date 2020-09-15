@@ -4,43 +4,63 @@ import { useSelector } from 'react-redux'
 import './dashboard.css'
 
 const Dashboard = () => {
-    const activeData = useSelector(state => state.active_data_type)
+    const activeData = useSelector(state => Object.entries(state.active_data_type).map(([key, value]) => {
+        return value
+    }))
+    console.log(activeData[0])
+    
+    // This function returns the correct key to pass into DataCards
+    const keyMatcher = () => {
+        
+    }
 
-    const dataParser = (object) => {
+    let parentKey = ''
+
+    const dataParser = (object, masterKey) => {
         return(
-            Object.entries(object).map(([key, value]) => {
-                //Check to see if the key is NaN
-                if(typeof value == 'object') {
-                    return dataParser(value);
-                }
-                
-                else if (Array.isArray(value) && NaN(key)) {
-                        return value.map((item) => {
-                            return(
-                                <DataCards k={key} value={item}  />
-                            )
-                        });
+                Object.entries(object).map(([key, value]) => {
+
+                    //Check to see if the key is NaN
+                    if (isNaN(key)) {
+                        parentKey = key
                     }
-                
-                    else if (typeof value == 'number' || typeof value == 'string') {
-                    return(
-                        <DataCards k={key} value={value}  />
-                        )
+                    if(typeof value == 'object') {
+                        return dataParser(value, masterKey);
                     }
                     
-                    else if (typeof value == 'undefined') {
-                        return null
-                    }
-                    else return dataParser(value)
-            })
+                    else if (Array.isArray(value)) {
+                            return value.map((item) => {
+                                return(
+                                    <div className='dashboard'>
+                                        <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                        <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={item}  />
+                                    </div>
+                                )
+                            });
+                        }
+                    
+                        else if (typeof value == 'number' || typeof value == 'string') {
+                        return(
+                            <div className='dashboard'>
+                                <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={value}  />
+                            </div>
+                            )
+                        }
+                        
+                        else if (typeof value == 'undefined') {
+                            return null
+                        }
+                        else return dataParser(value, masterKey)
+                })
             )
         }
         
 
 return(
-        Object.keys(activeData).length 
+        activeData[0] && Object.keys(activeData[0]).length 
         ?
-        Object.entries(activeData).map(([key, value]) => {
+        Object.entries(activeData[0]).map(([key, value]) => {
             if(Array.isArray(value)){
                 return value.map((item) => {
                     return(
@@ -49,13 +69,7 @@ return(
                 })
             }
             else if (typeof value === 'object') {
-                return (
-                    <div className='dashboard'>
-                    {
-                        dataParser(activeData) 
-                    }
-                    </div>
-                )
+                return dataParser(activeData, key) 
             }
         })
         :   

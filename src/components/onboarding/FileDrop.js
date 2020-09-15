@@ -49,7 +49,7 @@ const FileDrop = (props) => {
 
     return(
         <div className='file-drop'>
-            <h3>3: Drop your entire file here!</h3>
+            <h3>3: Drop your entire folder here!</h3>
             <div className='file-box' {...getRootProps()}>
                 <FaFileUpload className='icon-file-drop' />
                 <input {...getInputProps()} />

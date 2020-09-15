@@ -152,6 +152,10 @@
     margin: 10% auto;
 }
 
+.subcategory {
+    margin: 1%;
+}
+
 /* nav */
 .Nav {
     display: flex;
@@ -168,7 +172,7 @@
 }
 
 .nav-header{
-    margin: 2%;
+    margin: 1%;
     font-size: 1.9rem;
     font-weight: 400;
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
