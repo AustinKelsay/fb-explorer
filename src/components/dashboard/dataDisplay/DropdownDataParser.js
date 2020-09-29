@@ -7,7 +7,7 @@ export const DropdownDataParser = (object) => {
     return Object.entries(object).map(([key, value]) => {
             if (typeof value === 'object') {
                 return (
-                    <div key={Date.now()}>
+                    <Dropdown key={Date.now()}>
                         <Dropdown.Header>{`${key}:`}</Dropdown.Header>
                         {
                             (value.hasOwnProperty("uri"))
@@ -25,13 +25,13 @@ export const DropdownDataParser = (object) => {
                             </Dropdown.Item>
                         }
                         <Dropdown.Divider />
-                    </div>
+                    </Dropdown>
                 )
             }
             else if (Array.isArray(value)) {
                 return value.map((item) => {
                     return (
-                        <div key={Date.now()}>
+                        <Dropdown key={Date.now()}>
                             <Dropdown.Header>{`${key}:`}</Dropdown.Header>
                             {
                                 (item.hasOwnProperty("uri"))
@@ -49,12 +49,12 @@ export const DropdownDataParser = (object) => {
                                 </Dropdown.Item>
                             }
                             <Dropdown.Divider />
-                        </div>
+                        </Dropdown>
                     )
                 })
             }
             else return (
-                <div key={Date.now()}>
+                <Dropdown key={Date.now()}>
                     <Dropdown.Header>{`${key}:`}</Dropdown.Header>
                     {
                         (value.hasOwnProperty("uri"))
@@ -72,6 +72,6 @@ export const DropdownDataParser = (object) => {
                         </Dropdown.Item>
                     }
                     <Dropdown.Divider />
-                </div>
+                </Dropdown>
             )
     })}

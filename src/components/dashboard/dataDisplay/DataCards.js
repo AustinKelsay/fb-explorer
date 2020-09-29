@@ -6,12 +6,12 @@ import {DropdownDataParser} from "./DropdownDataParser"
 import "./dataDisplay.css"
 
 const DataCards = (props) => {
-    console.log(props.mk)
+    console.log(props)
     return(
         <div key={Date.now()} className="data-cards">
             <h5>{props.mk ? props.mk : null}</h5>
             <h5>{props.k ? props.k : null}</h5>
-            <h4>{(typeof props.value === 'string' || typeof props.value === 'number') ? props.value : (props.value.name || props.value.title)}</h4>
+            <h2>{(typeof props.value === 'string' || typeof props.value === 'number') ? props.value : (props.value.name || props.value.title)}</h2>
             {
                 props.value.hasOwnProperty("uri") 
                 ?
@@ -19,21 +19,23 @@ const DataCards = (props) => {
                 :
                 null
             }
-            {(typeof props.value !== 'string' && typeof props.value !== 'number') 
-            ?
-                <div className="data-cards-expanded">
-                    <label>{props.value.length}</label>
-                    <Dropdown>
-                        <Dropdown.Toggle variant="dark" id="dropdown">
-                        Open
-                        </Dropdown.Toggle>
-                                                            
-                        <Dropdown.Menu>
-                            {DropdownDataParser(props.value)}
-                        </Dropdown.Menu>
-                    </Dropdown>
-                </div>
-            : null}
+                {
+                typeof(props.value) == "object"
+                ?
+                    <div className="data-cards-expanded">
+                        <label>{props.value.length}</label>
+                        <Dropdown>
+                            <Dropdown.Toggle variant="info" id="dropdown">
+                            Open
+                            </Dropdown.Toggle>
+                                                                
+                            <Dropdown.Menu>
+                                {DropdownDataParser(props.value)}
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                : null
+                }
         </div>
     )
 }

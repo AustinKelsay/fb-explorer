@@ -8,11 +8,6 @@ const Dashboard = () => {
         return value
     }))
     console.log(activeData[0])
-    
-    // This function returns the correct key to pass into DataCards
-    const keyMatcher = () => {
-        
-    }
 
     let parentKey = ''
 
@@ -32,7 +27,7 @@ const Dashboard = () => {
                             return value.map((item) => {
                                 return(
                                     <div className='dashboard'>
-                                        <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                        <h2 className='subcategory'>Subcategory: {masterKey ? masterKey : "N/A"}</h2>
                                         <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={item}  />
                                     </div>
                                 )
@@ -42,7 +37,7 @@ const Dashboard = () => {
                         else if (typeof value == 'number' || typeof value == 'string') {
                         return(
                             <div className='dashboard'>
-                                <h2 className='subcategory'>Subcategory: {masterKey}</h2>
+                                <h2 className='subcategory'>Subcategory: {masterKey ? masterKey : "N/A"}</h2>
                                 <DataCards pk={parentKey} k={isNaN(key) ? key : ''} value={value}  />
                             </div>
                             )
@@ -69,7 +64,7 @@ return(
                 })
             }
             else if (typeof value === 'object') {
-                return dataParser(activeData, key) 
+                return dataParser(value, key) 
             }
         })
         :   

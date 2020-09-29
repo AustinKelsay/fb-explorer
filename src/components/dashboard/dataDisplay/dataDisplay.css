@@ -15,6 +15,11 @@
     margin-bottom: 3%;
 }
 
+.data-cards h2 {
+    color: #4b3f72;
+    margin: 1%;
+    margin-bottom: 3%;
+}
 .data-cards-expanded {
     display: flex;
     flex-direction: column;
@@ -22,10 +27,12 @@
     margin-top: -3%;
 }
 
-.show{
-    width: 100%;
+.dropdown-menu {
+    padding: 1%;
+    background: rgba(131, 125, 125, 0.452);
+    border: 1px solid black;
+    border-radius: 5px;
 }
-
 .dropdown-item{
     white-space: normal;
     margin: 0%;
