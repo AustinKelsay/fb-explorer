@@ -133,24 +133,24 @@ export function Reducer (state = initialState, action) {
             if(action.payload === 3)
             return{...state, active_data_type: {
                 apps_and_websites: {
-                    apps_and_websites: state.user_data['apps_and_websites.json'],
-                    posts_from_apps_and_websites: state.user_data['posts_from_apps_and_websites.json'],
-                    your_apps: state.user_data['your_apps.json']
+                    apps_and_websites: state.user_data['apps_and_websites.json'].installed_apps,
+                    posts_from_apps_and_websites: state.user_data['posts_from_apps_and_websites.json'].app_posts,
+                    your_apps: state.user_data['your_apps.json'].admined_apps
                 }
             }
             }
             if(action.payload === 4)
             return{...state, active_data_type: {
                 comments: {
-                    comments: state.user_data['comments.json'],
+                    comments: state.user_data['comments.json'].comments,
                 }
             }
             }
             if(action.payload === 5)
             return{...state, active_data_type: {
                 events: {
-                    events_invitations: state.user_data['events_invitations.json'],
-                    your_event_responses: state.user_data['your_event_responses.json'],
+                    events_invitations: state.user_data['events_invitations.json'].events_invited,
+                    your_event_responses: state.user_data['your_event_responses.json'].event_responses,
                 }
             }
             }
