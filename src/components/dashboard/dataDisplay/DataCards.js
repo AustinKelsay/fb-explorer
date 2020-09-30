@@ -6,7 +6,6 @@ import {DropdownDataParser} from "./DropdownDataParser"
 import "./dataDisplay.css"
 
 const DataCards = (props) => {
-    console.log(props)
     return(
         <div key={Date.now()} className="data-cards">
             <h5>{props.mk ? props.mk : null}</h5>
