@@ -8,6 +8,7 @@ MVP:
 - [x] User can log into facebook
 - [x] User is taken to page where they can download their data
 - [x] All data categories can be selected and displayed with keys and values present
+- [ ] Get photos/videos to behave in the dashboard
 - [ ] Compress the data cards down with a dropdown that holds all of the relevant information for a given piece of data (timestamp, comment, author, etc)
 - [ ] User can filter through data by date/length
 - [ ] User can search through data values
