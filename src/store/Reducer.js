@@ -15,6 +15,10 @@ const initialState = {
 
     },
 
+    media_content: {
+
+    },
+
     about_you: {
 
     },
@@ -253,6 +257,7 @@ export function Reducer (state = initialState, action) {
                         // have to find a way to search for all of them
                     },
                     your_videos: state.user_data['your_videos.json'],
+                    your_posts: state.user_data
                 }
             }
             }

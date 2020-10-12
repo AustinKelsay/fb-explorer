@@ -16,7 +16,7 @@ const FileDrop = (props) => {
             acceptedFiles.map((file) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    console.log(file.type)
+                    console.log(event.target)
                     if (typeof(event.target.result) == 'string') {
                         try {
                             dispatch({type: GET_USER_DATA, payload:{
@@ -29,6 +29,9 @@ const FileDrop = (props) => {
                                 name: file.name
                              }}) 
                         }
+                    }
+                    else if (typeof(file.type == 'jpg')) {
+                        console.log("JPGGGGG")
                     }
                   };
                 reader.readAsText(file);
