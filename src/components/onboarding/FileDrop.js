@@ -16,23 +16,27 @@ const FileDrop = (props) => {
             acceptedFiles.map((file) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    console.log(event.target)
-                    if (typeof(event.target.result) == 'string') {
-                        try {
-                            dispatch({type: GET_USER_DATA, payload:{
-                               data: JSON.parse(event.target.result),
-                               name: file.name
-                            }}) 
-                        } catch (e) {
-                            dispatch({type: GET_JUNK_DATA, payload:{
-                                data: event.target.result,
-                                name: file.name
-                             }}) 
-                        }
-                    }
-                    else if (typeof(file.type == 'jpg')) {
-                        console.log("JPGGGGG")
-                    }
+                    // console.log(event.target)
+                    // if (typeof(event.target.result) == 'string') {
+                    //     try {
+                    //         dispatch({type: GET_USER_DATA, payload:{
+                    //            data: JSON.parse(event.target.result),
+                    //            name: file.name
+                    //         }}) 
+                    //     } catch (e) {
+                    //         dispatch({type: GET_JUNK_DATA, payload:{
+                    //             data: event.target.result,
+                    //             name: file.name
+                    //          }}) 
+                    //     }
+                    // }
+                    // else if (typeof(file.type == 'jpg')) {
+                    //     console.log("JPGGGGG")
+                    // }
+                    dispatch({type: GET_USER_DATA, payload: {
+                        data: JSON.parse(event.target.result),
+                        name: file.name
+                    }})
                   };
                 reader.readAsText(file);
 
