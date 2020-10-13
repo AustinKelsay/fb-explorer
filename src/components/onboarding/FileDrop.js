@@ -33,8 +33,9 @@ const FileDrop = (props) => {
                     // else if (typeof(file.type == 'jpg')) {
                     //     console.log("JPGGGGG")
                     // }
+                    console.log(file.name)
                     dispatch({type: GET_USER_DATA, payload: {
-                        data: JSON.parse(event.target.result),
+                        data: JSON.stringify(event.target.result),
                         name: file.name
                     }})
                   };
@@ -49,7 +50,6 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
-        dispatch({type: GET_USER_NAME})
         dispatch({type: SHOW_DATA})
         props.history.push('/explorer')
     }
