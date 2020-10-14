@@ -51,7 +51,7 @@ const FileDrop = (props) => {
     const handleLog = (e) => {
         e.preventDefault()
         dispatch({type: SHOW_DATA})
-        props.history.push('/explorer')
+        props.history.push('/categories')
     }
 
     return(

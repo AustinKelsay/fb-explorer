@@ -22,6 +22,24 @@
     font-size: 1.2rem;
 }
 
+.active {
+    margin: 0.1% auto;
+    width: 30%;
+    height: 25%;
+    background-color: #6495ED;
+    cursor: pointer;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.icon {
+    font-size: 1.3rem;
+}
+
 
 /* .data-category {
     width: 30%;

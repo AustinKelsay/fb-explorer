@@ -7,7 +7,7 @@ import {FaRegUser, FaBuilding, FaDesktop, FaMailBulk, FaImages, FaComments, FaCa
      FaSearch, FaLock, FaBookOpen, FaThumbtack } from 'react-icons/fa';
 import { SET_DATA_TYPE } from "../../store/Actions";
 
-const DataCategories = () => {
+const DataCategories = (props) => {
     const [active, setActive] = useState(0)
     const dispatch = useDispatch()
 
@@ -15,6 +15,7 @@ const DataCategories = () => {
         console.log(num)
         setActive(num)
         dispatch({type: SET_DATA_TYPE, payload: num})
+        props.history.push('/display')
     }
 
     return(
