@@ -4,7 +4,7 @@ import Login from "./components/onboarding/Login"
 import {Route} from 'react-router-dom';
 import "./App.css"
 import DataCategories from "./components/dashboard/DataCategories"
-import DataDisplay from "./components/dashboard/DataDisplay"
+import DataDisplay from "./components/dashboard/DataCategory"
 
 const App = () => {
     return(
