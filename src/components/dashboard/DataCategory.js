@@ -10,6 +10,7 @@ const DataCategory = () => {
     const dataKey = Object.keys(data)[0]
     // Assgin a final variable that picks the dynamic property out of state.active_data_type
     const activeData = data[dataKey]
+    console.log(activeData)
 
     return (
         <div>

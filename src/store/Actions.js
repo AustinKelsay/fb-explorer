@@ -1,4 +1,5 @@
 export const SHOW_DATA = "SHOW_DATA"
+export const GET_INDEX_HTML = 'GET_INDEX_HTML' 
 export const GET_USER_DATA = "GET_USER_DATA"
 export const GET_JUNK_DATA = "GET_JUNK_DATA"
 export const GET_USER_NAME = 'GET_USER_NAME'

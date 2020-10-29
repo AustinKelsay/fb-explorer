@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import { useSelector, useDispatch } from 'react-redux'
-import {GET_USER_DATA, GET_USER_NAME, GET_JUNK_DATA, SHOW_DATA} from "../../store/Actions"
+import {GET_USER_DATA, GET_USER_NAME, GET_JUNK_DATA, SHOW_DATA, GET_INDEX_HTML} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import './onboarding.css'
 
@@ -38,6 +38,9 @@ const FileDrop = (props) => {
                         data: JSON.stringify(event.target.result),
                         name: file.name
                     }})
+                    if (file.name == 'index.html') {
+                        dispatch({type: GET_INDEX_HTML, payload: event.target.result})
+                    }
                   };
                 reader.readAsText(file);
 

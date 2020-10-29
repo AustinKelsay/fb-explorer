@@ -1,12 +1,13 @@
-import {GET_USER_DATA, GET_JUNK_DATA, SHOW_DATA, GET_USER_NAME, SET_DATA_TYPE, SET_QUERY } from "./Actions"
+import {GET_USER_DATA, GET_JUNK_DATA, SHOW_DATA, GET_USER_NAME, SET_DATA_TYPE, SET_QUERY, GET_INDEX_HTML } from "./Actions"
 
 const initialState = {
+    index: {},
+
     user_fb_name: '',
 
     user_data: {
         
     },
-
     junk_data: {
 
     },
@@ -97,6 +98,9 @@ const initialState = {
 
 export function Reducer (state = initialState, action) {
     switch(action.type) {
+        case GET_INDEX_HTML: {
+            return {...state, index: action.payload}
+        }
         case GET_USER_DATA: {
             const name = action.payload.name
             return {...state, user_data: {...state.user_data, [name]: action.payload.data} }
@@ -153,7 +157,7 @@ export function Reducer (state = initialState, action) {
             if(action.payload === 5)
             return{...state, active_data_type: {
                 events: {
-                    events_invitations: state.user_data['events_invitations.html'].events_invited,
+                    events_invitations: state.user_data['event_invitations.html'].events_invited,
                     your_event_responses: state.user_data['your_event_responses.html'].event_responses,
                 }
             }
