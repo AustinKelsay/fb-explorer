@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import { useSelector, useDispatch } from 'react-redux'
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, SHOW_STORE} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, POPULATE_FILES, SHOW_STORE} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import './onboarding.css'
 
@@ -19,6 +19,7 @@ const FileDrop = (props) => {
                     // Splitting the pathnames by forward slashes so I can grab the category name                    
                     const path = file.path.split("/")
                     dispatch({type: POPULATE_CATEGORIES, payload: path[2]})
+                    dispatch({type: POPULATE_FILES, payload: {name: file.name, data: event.target.result}})
                     console.log(event.target)
 
                     if (file.name == 'index.html') {
