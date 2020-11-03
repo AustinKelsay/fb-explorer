@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import { useSelector, useDispatch } from 'react-redux'
-import {GET_USER_DATA, GET_USER_NAME, GET_JUNK_DATA, SHOW_DATA, GET_INDEX_HTML} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, SHOW_STORE} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import './onboarding.css'
 
@@ -16,25 +16,11 @@ const FileDrop = (props) => {
             acceptedFiles.map((file) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    // Regex to find the category name (any character between two forward slashes but also the forward slashes)
-                    // \/(.+)\/
-                    // Regex to remove the forward slashes
-                    // [^/]+
-                    const wordPattern = /\/(.+)\//i
+                    // Splitting the pathnames by forward slashes so I can grab the category name                    
+                    const path = file.path.split("/")
+                    dispatch({type: POPULATE_CATEGORIES, payload: path[2]})
+                    console.log(event.target)
 
-                    const path = file.path
-                    let test
-                    const firstMatch = path.replace(wordPattern, (match) => {
-                        console.log(match)
-                    })
-        
-                    
-
-                    console.log(file.name)
-                    dispatch({type: GET_USER_DATA, payload: {
-                        data: JSON.stringify(event.target.result),
-                        name: file.name
-                    }})
                     if (file.name == 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
                     }
@@ -50,7 +36,7 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
-        dispatch({type: SHOW_DATA})
+        dispatch({type: SHOW_STORE})
         props.history.push('/categories')
     }
 
