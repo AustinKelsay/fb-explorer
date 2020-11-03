@@ -16,23 +16,20 @@ const FileDrop = (props) => {
             acceptedFiles.map((file) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    // console.log(event.target)
-                    // if (typeof(event.target.result) == 'string') {
-                    //     try {
-                    //         dispatch({type: GET_USER_DATA, payload:{
-                    //            data: JSON.parse(event.target.result),
-                    //            name: file.name
-                    //         }}) 
-                    //     } catch (e) {
-                    //         dispatch({type: GET_JUNK_DATA, payload:{
-                    //             data: event.target.result,
-                    //             name: file.name
-                    //          }}) 
-                    //     }
-                    // }
-                    // else if (typeof(file.type == 'jpg')) {
-                    //     console.log("JPGGGGG")
-                    // }
+                    // Regex to find the category name (any character between two forward slashes but also the forward slashes)
+                    // \/(.+)\/
+                    // Regex to remove the forward slashes
+                    // [^/]+
+                    const wordPattern = /\/(.+)\//i
+
+                    const path = file.path
+                    let test
+                    const firstMatch = path.replace(wordPattern, (match) => {
+                        console.log(match)
+                    })
+        
+                    
+
                     console.log(file.name)
                     dispatch({type: GET_USER_DATA, payload: {
                         data: JSON.stringify(event.target.result),
