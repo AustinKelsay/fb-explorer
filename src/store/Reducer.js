@@ -1,8 +1,9 @@
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, SHOW_STORE } from "./Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA } from "./Actions"
 
 const initialState = {
     index: {},
-    categories: []
+    categories: [],
+    userData: false
 }
 
 export function Reducer (state = initialState, action) {
@@ -13,8 +14,9 @@ export function Reducer (state = initialState, action) {
         case POPULATE_CATEGORIES: {
            return {...state, categories: [...state.categories, action.payload]}
         }
-        case SHOW_STORE: {
+        case USER_DATA: {
             console.log(state)
+            return {...state, userData: true}
         }
         default: return state;
     }

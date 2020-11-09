@@ -1,3 +1,3 @@
 export const GET_INDEX_HTML = 'GET_INDEX_HTML' 
 export const POPULATE_CATEGORIES = 'POPULATE_CATEGORIES'
-export const SHOW_STORE = 'SHOW_STORE'
+export const USER_DATA = 'USER_DATA'

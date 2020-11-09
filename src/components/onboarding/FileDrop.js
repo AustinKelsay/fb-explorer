@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import { useSelector, useDispatch } from 'react-redux'
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, SHOW_STORE} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import './onboarding.css'
 
@@ -35,7 +35,7 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
-        dispatch({type: SHOW_STORE})
+        dispatch({type: USER_DATA})
         props.history.push('/categories')
     }
 

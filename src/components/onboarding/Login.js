@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import {useSelector} from "react-redux"
 import "./onboarding.css"
 
 const Login = () => {
-
 
     return(
         <div className="Login">

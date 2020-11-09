@@ -10,6 +10,8 @@ const CategoryRouter = () => {
         <div>
         {
             categoryData.map((category) => {
+                console.log(typeof(category.name))
+                console.log(typeof(category.path))
                 return <Route path={category.path + '/' + category.name} render={(props) => <DataDisplay data={category.data} />} />
             })
         }
