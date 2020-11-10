@@ -7,12 +7,17 @@ import DataDisplay from "./DataDisplay"
 
 const Categories = () => {
     const data = useSelector(state => state.index)
+    const categoryData = useSelector(state => state.categories)
 
-    return (
-        <div>
-            {ReactHtmlParser(data)}
-        </div>
-    )
+    categoryData.map((category) => {
+      const path = "/" + category.path + "/" + category.name
+      console.log(typeof(path), path)
+      if (path == '/posts/your_posts_1.html') {
+        localStorage.setItem('userData', category.data)
+      }
+    })
+
+    return ReactHtmlParser(data)
 }
 
 export default Categories;

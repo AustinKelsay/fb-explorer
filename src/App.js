@@ -9,24 +9,28 @@ import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";
 
 const App = () => {
-    const [dynamicPath, setDynamicPath] = useState("")
-    const userData = useSelector(state => state.userData)
-    const categoryData = useSelector(state => state.categories)
+  const [activeData, setActiveData] = useState({})
+  const userData = useSelector(state => state.userData)
+  const categoryData = useSelector(state => state.categories)
 
   return (
     <div className="App">
       <Route exact path="/" component={Login} />
       <Route exact path="/" component={FileDrop} />
       <Route exact path="/categories" component={Categories} />
-      {
+      <Route exact path="/posts/your_posts_1.html" render={(props) => <DataDisplay {...props} />} />
+      {/* {
                 userData ?
                 categoryData.map((category) => {
-                    const path = category.path + "/" + category.name
+                    const path = "/" + category.path + "/" + category.name
                     console.log(typeof(path), path)
-                    return <Route path={category.path + '/' + category.name} render={(props) => <DataDisplay {...props} data={category.data} />} />
+                    if (path == '/posts/your_posts_1.html') {
+                      setActiveData(category.data)
+                    }
+                    return <Route exact path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
                 })
                 : null
-            }
+            } */}
     </div>
   );
 };

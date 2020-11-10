@@ -1,9 +1,10 @@
-import React from "react"
+import React, {useState} from "react"
 import ReactHtmlParser from "react-html-parser"
+import {useSelector} from "react-redux"
 
 const DataDisplay = (props) => {
-    console.log(props)
-    return ReactHtmlParser(props.data)
+    const data = localStorage.getItem('userData')
+    return ReactHtmlParser(data)
 }
 
 export default DataDisplay
