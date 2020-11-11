@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import "./App.css";
 import DataDisplay from "./components/dashboard/DataDisplay";
 import DataCategory from "./components/dashboard/DataCategory";
+import {BrowserRouter as Router} from 'react-router-dom';
 import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";
 
@@ -18,19 +19,19 @@ const App = () => {
       <Route exact path="/" component={Login} />
       <Route exact path="/" component={FileDrop} />
       <Route exact path="/categories" component={Categories} />
-      <Route exact path="/posts/your_posts_1.html" render={(props) => <DataDisplay {...props} />} />
-      {/* {
-                userData ?
-                categoryData.map((category) => {
+      <Route exact path="/photos_and_videos/your_photos.html" render={(props) => <DataDisplay {...props} />} />
+      {
+              userData ?
+              <Router>
+                {
+                  categoryData.map((category) => {
                     const path = "/" + category.path + "/" + category.name
-                    console.log(typeof(path), path)
-                    if (path == '/posts/your_posts_1.html') {
-                      setActiveData(category.data)
-                    }
-                    return <Route exact path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
-                })
-                : null
-            } */}
+                    return <Route path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
+                  })
+                }
+              </Router>
+              : null
+            }
     </div>
   );
 };
