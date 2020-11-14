@@ -9,9 +9,9 @@ import { Provider } from "react-redux";
 import { Reducer } from "./store/Reducer";
 import {useSelector} from "react-redux"
 import thunk from "redux-thunk";
-import DataDisplay from "./components/dashboard/DataDisplay"
+import logger from 'redux-logger'
 
-const store = createStore(Reducer, applyMiddleware(thunk));
+const store = createStore(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>

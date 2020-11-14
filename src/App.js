@@ -10,7 +10,6 @@ import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";
 
 const App = () => {
-  const [activeData, setActiveData] = useState({})
   const userData = useSelector(state => state.userData)
   const categoryData = useSelector(state => state.categories)
 
@@ -22,14 +21,10 @@ const App = () => {
       <Route exact path="/photos_and_videos/your_photos.html" render={(props) => <DataDisplay {...props} />} />
       {
               userData ?
-              <Router>
-                {
                   categoryData.map((category) => {
                     const path = "/" + category.path + "/" + category.name
                     return <Route path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
                   })
-                }
-              </Router>
               : null
             }
     </div>
