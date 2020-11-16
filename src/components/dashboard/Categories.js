@@ -2,7 +2,6 @@ import React from "react"
 import ReactHtmlParser from "react-html-parser"
 import { useSelector } from "react-redux";
 import {Route} from "react-router-dom"
-import {BrowserRouter as Router} from 'react-router-dom';
 import DataDisplay from "./DataDisplay"
 
 
@@ -22,14 +21,6 @@ const Categories = () => {
 
     return (
       ReactHtmlParser(data)
-      // <Router>
-      //   {
-      //     categoryData.map((category) => {
-      //       const path = "/" + category.path + "/" + category.name
-      //       return <Route path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
-      //     })
-      //   }
-      // </Router>
     )
 }
 
