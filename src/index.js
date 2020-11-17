@@ -13,21 +13,19 @@ import storage from "redux-persist/lib/storage/session"
 import thunk from "redux-thunk";
 import logger from 'redux-logger'
 
-const persistConfig = {
-  key: 'root',
-  storage,
-}
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+// }
 
-const persistedReducer = persistReducer(persistConfig, Reducer)
-const store = createStore(persistedReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+// const persistedReducer = persistReducer(persistConfig, Reducer)
+const store = createStore(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const persistor = persistStore(store)
 
 ReactDOM.render(
   <Provider store={store}>
       <Router>
-        <PersistGate persistor={persistor} >
           <App />
-        </PersistGate>
       </Router> 
     </Provider>,
   document.getElementById('root')
