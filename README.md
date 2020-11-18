@@ -1,21 +1,21 @@
 # fb-explorer
 
-fb-explorer is a web app that allows a user to log into Facebook, download their data, drop it in, and explore it in a sleek dashboard that doesn't collect any information.
+fb-explorer is a web app that allows a user to log into Facebook, download their data, drop it in, and explore it in it's native html format! 
+
+# This app does not collect or store any of your personal information.
 
 fb-explorer is still under construction as I am working towards MVP
 
 MVP:
 - [x] User can log into facebook
 - [x] User is taken to page where they can download their data
-- [x] All data categories can be selected and displayed with keys and values present
-- [ ] Get photos/videos to behave in the dashboard
-- [ ] Compress the data cards down with a dropdown that holds all of the relevant information for a given piece of data (timestamp, comment, author, etc)
-- [ ] User can filter through data by date/length
-- [ ] User can search through data values
+- [x] Data is being parsed, organized, and stored in global state.
+- [x] User can explore the index with all of their data categories
+- [x] User can click on a SPECIFIC category and be routed to that page where that categories html is rendered for them
+- [ ] Get photos/videos to render correctly in the html
 - [ ] Make the app fully responsive
+- [ ] Fix all tiny bugs, warnings, and remove unused libraries/packages
 
 Features beyond MVP:
 - [ ] Master search for values across categories
-- [ ] Allow user to also drop in HTML data and render the exact data pages
-- [ ] User can log into facebook
-- [ ] Allow user to export their personal dashboard instance and install it locally (user's data will NEVER be stored or saved by this app)
+- [ ] Integrate with Blockstack Auth and Blockstack Gaia so user can save encrypt and save their data in the cloud and protect it with their personal key
