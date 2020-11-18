@@ -1,20 +1,34 @@
-import React from "react"
-import FileDrop from "./components/onboarding/FileDrop"
-import Login from "./components/onboarding/Login"
-import {Route} from 'react-router-dom';
-import "./App.css"
-import Nav from "./components/dashboard/Nav"
-import ParentContainer from "./components/dashboard/ParentContainer";
+import React, { useEffect, useState } from "react";
+import FileDrop from "./components/onboarding/FileDrop";
+import Login from "./components/onboarding/Login";
+import { Route } from "react-router-dom";
+import "./App.css";
+import DataDisplay from "./components/dashboard/DataDisplay";
+import DataCategory from "./components/dashboard/DataCategory";
+import {BrowserRouter as Router} from 'react-router-dom';
+import Categories from "./components/dashboard/Categories";
+import { useSelector } from "react-redux";
 
 const App = () => {
-    return(
-        <div className='App'>
-            <Route exact path="/" component ={Login} />
-            <Route exact path="/" component ={FileDrop} />
-            <Route exact path="/explorer" component ={Nav} />
-            <Route exact path="/explorer" component ={ParentContainer} />
-        </div>
-    )
-}
+  const userData = useSelector(state => state.userData)
+  const categoryData = useSelector(state => state.categories)
+
+  return (
+    <div className="App">
+      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={FileDrop} />
+      <Route exact path="/categories" render={(props) => <Categories {...props} />} />
+      <Route exact path="/photos_and_videos/your_photos.html" render={(props) => <DataDisplay {...props} />} />
+      {
+              userData ?
+                  categoryData.map((category) => {
+                    const path = "/" + category.path + "/" + category.name
+                    return <Route path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
+                  })
+              : null
+            }
+    </div>
+  );
+};
 
 export default App;

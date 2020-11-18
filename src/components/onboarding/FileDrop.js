@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import { useSelector, useDispatch } from 'react-redux'
-import {GET_USER_DATA, GET_USER_NAME, GET_JUNK_DATA, SHOW_DATA} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import './onboarding.css'
 
@@ -16,22 +16,12 @@ const FileDrop = (props) => {
             acceptedFiles.map((file) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    console.log(event.target)
-                    if (typeof(event.target.result) == 'string') {
-                        try {
-                            dispatch({type: GET_USER_DATA, payload:{
-                               data: JSON.parse(event.target.result),
-                               name: file.name
-                            }}) 
-                        } catch (e) {
-                            dispatch({type: GET_JUNK_DATA, payload:{
-                                data: event.target.result,
-                                name: file.name
-                             }}) 
-                        }
-                    }
-                    else if (typeof(file.type == 'jpg')) {
-                        console.log("JPGGGGG")
+                    // Splitting the pathnames by forward slashes so I can grab the category name                    
+                    const path = file.path.split("/")
+                    dispatch({type: POPULATE_CATEGORIES, payload: {path: path[2], name: file.name, data: event.target.result}})
+
+                    if (file.name == 'index.html') {
+                        dispatch({type: GET_INDEX_HTML, payload: event.target.result})
                     }
                   };
                 reader.readAsText(file);
@@ -45,9 +35,8 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
-        dispatch({type: GET_USER_NAME})
-        dispatch({type: SHOW_DATA})
-        props.history.push('/explorer')
+        dispatch({type: USER_DATA})
+        props.history.push('/categories')
     }
 
     return(
