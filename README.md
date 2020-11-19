@@ -2,7 +2,7 @@
 
 fb-explorer is a web app that allows a user to log into Facebook, download their data, drop it in, and explore it in it's native html format! 
 
-# This app does not collect or store any of your personal information.
+# This app does not collect or store any of your personal information or Facebook data
 
 fb-explorer is still under construction as I am working towards MVP
 
