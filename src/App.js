@@ -18,7 +18,6 @@ const App = () => {
       <Route exact path="/" component={Login} />
       <Route exact path="/" component={FileDrop} />
       <Route exact path="/categories" render={(props) => <Categories {...props} />} />
-      <Route exact path="/photos_and_videos/your_photos.html" render={(props) => <DataDisplay {...props} />} />
       {
               userData ?
                   categoryData.map((category) => {
