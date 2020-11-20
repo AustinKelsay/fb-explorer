@@ -55,6 +55,7 @@ const FileDrop = (props) => {
     return(
         <div className='file-drop'>
             <h3>3: Drop your entire folder here!</h3>
+            <p>(None of your data will be stored)</p>
             <div className='file-box' {...getRootProps()}>
                 <FaFileUpload className='icon-file-drop' />
                 <input {...getInputProps()} />
