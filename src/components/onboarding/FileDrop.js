@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useDropzone} from "react-dropzone"
 import {useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap';
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_MEDIA} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import { Ring } from 'react-spinners-css';
 import Zoom from 'react-reveal/Zoom';
@@ -23,18 +23,22 @@ const FileDrop = (props) => {
     }
 
     const {acceptedFiles, getRootProps, getInputProps} = useDropzone({
-        accept: '/*',
         onDrop: (acceptedFiles) => {
             acceptedFiles.map((file) => {
                 ringTimer()
                 const reader = new FileReader()
                 reader.onload = function(event) {
-                    // Splitting the pathnames by forward slashes so I can grab the category name                    
-                    const path = file.path.split("/")
-                    dispatch({type: POPULATE_CATEGORIES, payload: {path: path[2], name: file.name, data: event.target.result}})
-
+                    
+                    
+                    if (file.type.includes('image') || file.type.includes('video')) {
+                        dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: file.preview}})
+                    }                    
                     if (file.name == 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
+                    }
+                    else if (file.name.includes('.html')) {
+                        const path = file.path.split("/")
+                        dispatch({type: POPULATE_CATEGORIES, payload: {path: path[2], name: file.name, data: event.target.result}})
                     }
                   };
                 reader.readAsText(file);
