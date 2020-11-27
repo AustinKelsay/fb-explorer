@@ -29,7 +29,7 @@ const FileDrop = (props) => {
                 const reader = new FileReader()
                 reader.onload = function(event) {
                     
-                    
+                    //split up into multiple cases
                     if (file.type.includes('image') || file.type.includes('video')) {
                         dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }                    
