@@ -31,7 +31,7 @@ const FileDrop = (props) => {
                     
                     
                     if (file.type.includes('image') || file.type.includes('video')) {
-                        dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: file.preview}})
+                        dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }                    
                     if (file.name == 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
