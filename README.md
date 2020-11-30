@@ -12,7 +12,8 @@ MVP:
 - [x] Data is being parsed, organized, and stored in global state.
 - [x] User can explore the index with all of their data categories
 - [x] User can click on a SPECIFIC category and be routed to that page where that categories html is rendered for them
-- [ ] Get photos/videos to render correctly in the html
+- [x] Get photos/videos to render correctly in the html
+- [ ] Optimize preformance and fix broken img/video links
 - [ ] Make the app fully responsive
 - [ ] Fix all tiny bugs, warnings, and remove unused libraries/packages
 
