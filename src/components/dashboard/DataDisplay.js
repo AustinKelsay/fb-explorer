@@ -10,15 +10,15 @@ const DataDisplay = (props) => {
         if (!domNode.attribs) {
           return
         }
-        // if (domNode.attribs.href) {
-        //   console.log(domNode)
-        //   return (
-        //     <a href={domNode.attribs.href} onClick={(e) => {
-        //       e.preventDefault()
-        //       props.history.push(domNode.attribs.href)
-        //     }} style={{cursor: "pointer"}}>{domNode.children[0] ? domNode.children[0] : null}</a>
-        //   )
-        //   }
+        if (domNode.attribs.href) {
+          console.log(domNode)
+          return (
+            <a href={domNode.attribs.href} onClick={(e) => {
+              e.preventDefault()
+              props.history.push(domNode.attribs.href)
+            }} style={{cursor: "pointer"}}>{domNode.children[0] ? domNode.children[0] : null}</a>
+          )
+          }
         
         if (domNode.attribs.src) {
             const mediaItems = domNode.attribs.src.split('/')
