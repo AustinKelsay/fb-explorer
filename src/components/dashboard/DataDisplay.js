@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import parse from "html-react-parser"
+import parse, {domToReact} from "html-react-parser"
 import {useSelector} from "react-redux"
 
 const DataDisplay = (props) => {
@@ -10,15 +10,6 @@ const DataDisplay = (props) => {
         if (!domNode.attribs) {
           return
         }
-        if (domNode.attribs.href) {
-          console.log(domNode)
-          return (
-            <a href={domNode.attribs.href} onClick={(e) => {
-              e.preventDefault()
-              props.history.push(domNode.attribs.href)
-            }} style={{cursor: "pointer"}}>{domNode.children[0] ? domNode.children[0] : null}</a>
-          )
-          }
         
         if (domNode.attribs.src) {
             const mediaItems = domNode.attribs.src.split('/')
@@ -30,8 +21,20 @@ const DataDisplay = (props) => {
               }
             })
           }
+        if (domNode.name == "a") {
+          return (
+            <a onClick={(e) => {
+              e.preventDefault()
+              let pathSplit = domNode.attribs.href.split('/')
+              let currentPath = props.location.pathname.split('/')
+              let correctPath = currentPath[1] + '/' + pathSplit[2]
+              console.log(correctPath)
+              props.history.push(pathSplit[2])
+            }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
+          )
         }
       }
+    }
   
       
   
