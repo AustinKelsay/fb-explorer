@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useDropzone} from "react-dropzone"
 import {useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap';
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_MEDIA} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_IMAGES, POPULATE_VIDEO} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import { Ring } from 'react-spinners-css';
 import Zoom from 'react-reveal/Zoom';
@@ -30,8 +30,11 @@ const FileDrop = (props) => {
                 reader.onload = function(event) {
                     
                     //split up into multiple cases
-                    if (file.type.includes('image') || file.type.includes('video')) {
-                        dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                    if (file.type.includes('image')) {
+                        dispatch({type: POPULATE_IMAGES, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                    }
+                    if (file.type.includes('video')) {
+                        dispatch({type: POPULATE_VIDEO, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }                    
                     if (file.name == 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
