@@ -4,7 +4,6 @@ import Login from "./components/onboarding/Login";
 import { Route } from "react-router-dom";
 import "./App.css";
 import DataDisplay from "./components/dashboard/DataDisplay";
-import DataCategory from "./components/dashboard/DataCategory";
 import {BrowserRouter as Router} from 'react-router-dom';
 import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";

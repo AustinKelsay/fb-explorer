@@ -26,9 +26,6 @@ const DataDisplay = (props) => {
             <a onClick={(e) => {
               e.preventDefault()
               let pathSplit = domNode.attribs.href.split('/')
-              let currentPath = props.location.pathname.split('/')
-              let correctPath = currentPath[1] + '/' + pathSplit[2]
-              console.log(correctPath)
               props.history.push(pathSplit[2])
             }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
           )
