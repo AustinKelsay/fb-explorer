@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useDropzone} from "react-dropzone"
 import {useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap';
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_MEDIA} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_IMAGES, POPULATE_VIDEO} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import { Ring } from 'react-spinners-css';
 import Zoom from 'react-reveal/Zoom';
@@ -30,8 +30,11 @@ const FileDrop = (props) => {
                 reader.onload = function(event) {
                     
                     //split up into multiple cases
-                    if (file.type.includes('image') || file.type.includes('video')) {
-                        dispatch({type: POPULATE_MEDIA, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                    if (file.type == "image/jpeg" || file.type == "image/png" || file.type.includes("image")) {
+                        dispatch({type: POPULATE_IMAGES, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                    }
+                    if (file.type == "video/mp4" || file.type.includes('video') || file.type.includes('mp4')) {
+                        dispatch({type: POPULATE_VIDEO, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }                    
                     if (file.name == 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
@@ -39,6 +42,30 @@ const FileDrop = (props) => {
                     else if (file.name.includes('.html')) {
                         const path = file.path.split("/")
                         dispatch({type: POPULATE_CATEGORIES, payload: {path: path[2], name: file.name, data: event.target.result}})
+                    }
+                    else if (file.preview.includes("5926745f9d1f9a0fc13c905c1b4dc183&oe=5FAC582A")) {
+                        console.log(file)
+                    }
+                    else {
+                        if (file.type && file.type.includes("image")) {
+                            try {
+                                dispatch({type: POPULATE_IMAGES, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                            }
+                            catch {
+                                console.log(file)
+                            }
+                        }
+                        else if (file.type && file.type.includes("video")) {
+                            try {
+                                dispatch({type: POPULATE_VIDEO, payload: {name: file.name, data: URL.createObjectURL(file)}})
+                            }
+                            catch {
+                                console.log(file)
+                            }
+                        }
+                        else {
+                            console.log(file)
+                        }
                     }
                   };
                 reader.readAsText(file);
