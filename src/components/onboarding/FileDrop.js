@@ -43,9 +43,6 @@ const FileDrop = (props) => {
                         const path = file.path.split("/")
                         dispatch({type: POPULATE_CATEGORIES, payload: {path: path[2], name: file.name, data: event.target.result}})
                     }
-                    else if (file.preview.includes("5926745f9d1f9a0fc13c905c1b4dc183&oe=5FAC582A")) {
-                        console.log(file)
-                    }
                     else {
                         if (file.type && file.type.includes("image")) {
                             try {
