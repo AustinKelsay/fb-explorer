@@ -30,13 +30,13 @@ const FileDrop = (props) => {
                 reader.onload = function(event) {
                     
                     //split up into multiple cases
-                    if (file.type == "image/jpeg" || file.type == "image/png" || file.type.includes("image")) {
+                    if (file.type === "image/jpeg" || file.type === "image/png" || file.type.includes("image")) {
                         dispatch({type: POPULATE_IMAGES, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }
-                    if (file.type == "video/mp4" || file.type.includes('video') || file.type.includes('mp4')) {
+                    if (file.type === "video/mp4" || file.type.includes('video') || file.type.includes('mp4')) {
                         dispatch({type: POPULATE_VIDEO, payload: {name: file.name, data: URL.createObjectURL(file)}})
                     }                    
-                    if (file.name == 'index.html') {
+                    if (file.name === 'index.html') {
                         dispatch({type: GET_INDEX_HTML, payload: event.target.result})
                     }
                     else if (file.name.includes('.html')) {

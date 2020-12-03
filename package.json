@@ -30,7 +30,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "style-to-object": "^0.3.0",
-    "uuid": "^8.3.0"
+    "uuid": "^8.3.1"
   },
   "scripts": {
     "start": "HTTPS=true react-scripts start",
