@@ -1,9 +1,6 @@
 import React from "react"
-import { renderToStaticMarkup } from 'react-dom/server';
-import parse, { attributesToProps, domToReact } from 'html-react-parser';
+import parse from 'html-react-parser';
 import { useSelector } from "react-redux";
-import {Route, Link} from "react-router-dom"
-import DataDisplay from "./DataDisplay"
 
 
 const Categories = (props) => {
