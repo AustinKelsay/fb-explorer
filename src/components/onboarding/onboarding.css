@@ -124,4 +124,7 @@
     .file-drop {
         margin-top: 2%;
     }
+    .file-drop button {
+        height: 10%;
+    }
 }
