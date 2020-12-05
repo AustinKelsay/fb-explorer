@@ -68,7 +68,7 @@
 
 .file-drop button {
     width: 10%;
-    height: 7%;
+    height: 8%;
     margin: 1% auto;
     background-color: #4b3f72;
     font-size: 1.2rem;
@@ -118,4 +118,10 @@
 
 .file-drop #faded {
     opacity: 0.7;
+}
+
+@media (max-height: 750px) {
+    .file-drop {
+        margin-top: 2%;
+    }
 }
