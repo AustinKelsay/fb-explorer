@@ -5,8 +5,6 @@ import { useSelector } from "react-redux";
 
 const Categories = (props) => {
     const data = useSelector(state => state.index)
-    const categoryData = useSelector(state => state.categories)
-    //function to call with event object (and hopefully data relevant to the path/category?)
 
     const options = {
       replace: (domNode) => {

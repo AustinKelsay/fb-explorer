@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useState} from "react"
 import parse, {domToReact} from "html-react-parser"
+import {Alert, Button} from "react-bootstrap"
 import {useSelector} from "react-redux"
 
 const DataDisplay = (props) => {
@@ -23,7 +24,7 @@ const DataDisplay = (props) => {
                 if (file.name === mediaItem) {
                   return domNode.attribs.src = file.data
                 }
-                // The src attribs with the url "" were the ones giving me trouble
+                // The src attribs with the url "https://interncache-ash.fbcdn.net" were the ones giving me trouble
                 // The file name can still be extracted from src just in a different way then mediaItem
                 else if (domNode.attribs.src.includes("interncache")) {
                   let completeSrc = domNode.attribs.src.split('/')
