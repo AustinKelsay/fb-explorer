@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import {useDropzone} from "react-dropzone"
 import {useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap';
@@ -13,6 +13,7 @@ const FileDrop = (props) => {
     const [ring, setRing] = useState(false);
     const [dataReady, setDataReady] = useState(false);
     const dispatch = useDispatch()
+
 
     const ringTimer = () => {
         setRing(true)
@@ -76,6 +77,7 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
+        alert("Some pages may experience a delay when rendering photos/videos")
         dispatch({type: USER_DATA})
         props.history.push('/categories')
     }
@@ -88,6 +90,7 @@ const FileDrop = (props) => {
                 <FaFileUpload className='icon-file-drop' />
                 <input {...getInputProps()} />
             </div>
+            
             <div className="ring-container">
                     {
                         ring ?

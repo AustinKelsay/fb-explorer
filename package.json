@@ -30,6 +30,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "style-to-object": "^0.3.0",
+    "styled-components": "^5.2.1",
     "uuid": "^8.3.1"
   },
   "scripts": {
