@@ -77,7 +77,7 @@ const FileDrop = (props) => {
 
     const handleLog = (e) => {
         e.preventDefault()
-        alert("Some pages may experience a delay when rendering photos/videos")
+        alert("Pages with many photos/videos may experience a delay when rendering")
         dispatch({type: USER_DATA})
         props.history.push('/categories')
     }
