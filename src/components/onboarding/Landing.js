@@ -9,7 +9,7 @@ const Landing = () => {
 
             <div className="description">
                 <p>fbexplorer lets you reclaim, explore, and search all of your Facebook data</p>
-                <video src={categoryScroll} className="description-video" preload="auto" muted autoplay loop />
+                <video src={categoryScroll} className="description-video" preload="auto" muted autoplay='true' loop />
             </div>
         </div>
     )
