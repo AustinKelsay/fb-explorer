@@ -16,26 +16,60 @@
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: black;
     font-family: 'Audiowide', sans-serif;
+    text-decoration: underline;
 }
 
 .description {
+    background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
     display: flex;
     flex-direction: column;
     margin: 1% auto;
     width: 60%;
     padding: 2%;
+    padding-bottom: 0.5%;
     border: 1px solid white;
     border-radius: 5px;
+    box-shadow: 5px 10px 18px black;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .description p {
+    color: black;
     text-align: center;
     margin-bottom: 2%;
 }
 
 .description-video {
-    width: 80%;
+    width: 68%;
     margin: 1% auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.next {
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 0.3%;
+    background-color: #4b3f72;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.step {
+    color: black;
+    margin: 1% auto;
+    margin-top: 1%;
+    font-size: 1.2rem;
 }
 
 /* Login */
@@ -79,6 +113,7 @@
     flex-direction: column;
     align-self: center;
     margin: 1% auto;
+    margin-bottom: 0;
 }
 
 .download-button {
