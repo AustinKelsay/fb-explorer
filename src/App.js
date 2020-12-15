@@ -1,6 +1,4 @@
 import React from "react";
-import FileDrop from "./components/onboarding/FileDrop";
-import Login from "./components/onboarding/Login";
 import Landing from "./components/onboarding/Landing"
 import Download from "./components/onboarding/Download"
 import Drop from "./components/onboarding/Drop"
