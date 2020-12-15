@@ -2,6 +2,8 @@ import React from "react";
 import FileDrop from "./components/onboarding/FileDrop";
 import Login from "./components/onboarding/Login";
 import Landing from "./components/onboarding/Landing"
+import Download from "./components/onboarding/Download"
+import Drop from "./components/onboarding/Drop"
 import { Route } from "react-router-dom";
 import "./App.css";
 import DataDisplay from "./components/dashboard/DataDisplay";
@@ -15,9 +17,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Route exact path="/" component={Login} />
-      <Route exact path="/" component={FileDrop} />
-      <Route exact path="/landing" component={Landing} />
+      <Route exact path="/" component={Landing} />
+      <Route exact path='/download' component={Download} />
+      <Route exact path='/drop' render={(props) => <Drop {...props} /> } />
       <Route exact path="/categories" render={(props) => <Categories {...props} />} />
       {
               userData ?

@@ -1,8 +1,15 @@
 import React from "react"
 import categoryScroll from "./media/category-scroll.mp4"
+import {Tooltip, OverlayTrigger} from "react-bootstrap";
+import {Link} from "react-router-dom"
 import {FaHandPointRight} from "react-icons/fa"
 
-const Landing = () => {
+const Landing = (props) => {
+    const renderTooltip = (props) => (
+        <Tooltip className='skip-tooltip' {...props}>
+          Already have your data?
+        </Tooltip>
+      );
 
     return (
         <div className="landing">
@@ -24,9 +31,15 @@ const Landing = () => {
                 <div className="button-container">
                     <div className="skip-container">
                         <FaHandPointRight className='icon-hand-point' />
-                        <a href="/drop" className="icon-text">Already have your data</a>
+                        <OverlayTrigger
+                            placement="right"
+                            delay={{ show: 100, hide: 200 }}
+                            overlay={renderTooltip}
+                        >
+                            <Link to='/drop' className="icon-text">Skip</Link>
+                        </OverlayTrigger>
                     </div>
-                    <button className='next'>Next</button>
+                    <Link to='/download' className='next'>Next</Link>
                 </div>
             </div>
         </div>
