@@ -3,6 +3,7 @@ import categoryScroll from "./media/category-scroll.mp4"
 import {Tooltip, OverlayTrigger} from "react-bootstrap";
 import {Link} from "react-router-dom"
 import {FaHandPointRight} from "react-icons/fa"
+import "./onboarding.css"
 
 const Landing = (props) => {
     const renderTooltip = (props) => (
