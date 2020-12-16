@@ -17,7 +17,7 @@ const Landing = (props) => {
             <h1 className="logo" >fbexplorer</h1>
 
             <div className="description">
-                <p>fbexplorer lets you reclaim, explore, and search all of your Facebook data</p>
+                <p>fbexplorer lets you reclaim, search, and explore all of your Facebook data</p>
                 <video src={categoryScroll} className="description-video" preload="auto" muted autoplay='true' loop />
                 <h3 className="step">Step 1: Log into Facebook</h3>
                 <div  id="fb-login"
@@ -37,7 +37,7 @@ const Landing = (props) => {
                             delay={{ show: 100, hide: 200 }}
                             overlay={renderTooltip}
                         >
-                            <Link to='/drop' className="icon-text">Skip</Link>
+                            <Link to='/drop' className="skip-button">Skip</Link>
                         </OverlayTrigger>
                     </div>
                     <Link to='/download' className='next'>Next</Link>
