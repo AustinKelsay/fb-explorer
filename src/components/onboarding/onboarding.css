@@ -25,7 +25,7 @@
     flex-direction: column;
     margin: 1% auto;
     width: 60%;
-    padding: 2%;
+    padding: 1%;
     padding-bottom: 0.5%;
     border: 1px solid white;
     border-radius: 5px;
@@ -295,5 +295,17 @@
     }
     .file-drop button {
         height: 10%;
+    }
+}
+
+@media (max-height: 670px) {
+    .description {
+        width: 58%;
+    }
+    .download-button {
+        width: 20%;
+    }
+    .icon-hand-point-down {
+        font-size: 2rem;
     }
 }
