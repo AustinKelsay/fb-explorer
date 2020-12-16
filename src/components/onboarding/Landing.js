@@ -37,7 +37,7 @@ const Landing = (props) => {
                             delay={{ show: 100, hide: 200 }}
                             overlay={renderTooltip}
                         >
-                            <Link to='/drop' className="icon-text">Skip</Link>
+                            <Link to='/drop' className="skip-button">Skip</Link>
                         </OverlayTrigger>
                     </div>
                     <Link to='/download' className='next'>Next</Link>
