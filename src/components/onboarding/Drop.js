@@ -89,7 +89,7 @@ const Drop = (props) => {
                 <p>You can now take the folder with all of your Facebook data and drop it into the file input below.</p>
                 <p>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</p>
                 <p>Your Facebook information will NEVER be stored or collected in this app.</p>
-                <h3 className="step-drop">Step 3: Drop your data below and start exploring!</h3>
+                <h2 className="step-drop">Step 3: Drop your data below and start exploring!</h2>
 
                 <div className='file-drop'>
                 <FaHandPointDown className='icon-hand-point-down' />
