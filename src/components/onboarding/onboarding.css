@@ -302,6 +302,10 @@
 
 @media (max-height: 670px) {
     .description {
+        width: 50%;
+        margin-top: 0.5%;
+    }
+    .description-video {
         width: 58%;
     }
     .download-button {
@@ -309,6 +313,12 @@
     }
     .icon-hand-point-down {
         font-size: 2rem;
+    }
+    .logo {
+        padding-top: 0.5%;
+    }
+    .button-container {
+        margin-top: 0.5%;
     }
 }
 
