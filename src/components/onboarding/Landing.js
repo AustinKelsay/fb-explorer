@@ -19,7 +19,15 @@ const Landing = (props) => {
 
             <div className="description">
                 <p>fbexplorer lets you reclaim, search, and explore all of your Facebook data</p>
-                <video type="video/mp4" src={categoryScroll} poster={thumbnail} className="description-video" poster="./media/thumbnail-fb.jpg" muted playsInline autoPlay autoplay="true"/>
+                <video 
+                    type="video/mp4" 
+                    src={categoryScroll} 
+                    poster={thumbnail} 
+                    className="description-video" 
+                    poster="./media/thumbnail-fb.jpg" 
+                    muted 
+                    playsInline 
+                    autoPlay  />
                 <h3 className="step">Step 1: Log into Facebook</h3>
                 <div  id="fb-login"
                     className="fb-login-button" 
