@@ -1,8 +1,8 @@
 import React from "react"
-import categoryScroll from "./media/category-scroll.mp4"
 import {Tooltip, OverlayTrigger} from "react-bootstrap";
 import {Link} from "react-router-dom"
 import {FaHandPointRight} from "react-icons/fa"
+import categoryScroll from "./media/category-scroll.mp4"
 import thumbnail from "./media/thumbnail-fb.jpg"
 import "./onboarding.css"
 
@@ -19,7 +19,7 @@ const Landing = (props) => {
 
             <div className="description">
                 <p>fbexplorer lets you reclaim, search, and explore all of your Facebook data</p>
-                <video src={categoryScroll} className="description-video" preload="auto" muted autoplay="true" loop/>
+                <video type="video/mp4" src={categoryScroll} poster={thumbnail} className="description-video" preload="auto" poster="./media/thumbnail-fb.jpg" muted playsInline autoPlay autoplay="true" loop/>
                 <h3 className="step">Step 1: Log into Facebook</h3>
                 <div  id="fb-login"
                     className="fb-login-button" 
