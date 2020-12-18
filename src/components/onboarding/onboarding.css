@@ -393,6 +393,16 @@
         padding: 1%;
         padding-top: 1.5%;
     }
+    .icon-file-drop {
+        font-size: 4rem;
+        padding: 1%;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .icon-file-drop:hover {
+        background-color: white;
+    }
 }
 
 @media (max-width: 700px) {
@@ -439,15 +449,18 @@
     }
     .icon-hand-point {
         font-size: 1.2rem;
+        padding-top: 5%;
     }
     .icon-hand-point-down {
         font-size: 2rem;
     }
     .next {
-        width: 14%;
+        width: 16%;
+        padding: 3%;
     }
     .skip-button {
-        width: 30%;
+        width: 40%;
+        padding-top: 5%;
     }
     .download-button {
         width: auto;
