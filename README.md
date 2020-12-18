@@ -14,7 +14,7 @@ MVP:
 - [x] User can click on a SPECIFIC category and be routed to that page where that categories html is rendered for them
 - [x] Get photos/videos to render correctly in the html
 - [x] Optimize preformance and fix broken img/video links
-- [ ] Make the app fully responsive
+- [x] Make the app fully responsive
 - [ ] Fix all tiny bugs, warnings, and remove unused libraries/packages
 
 Features beyond MVP:
