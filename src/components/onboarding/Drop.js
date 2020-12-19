@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Link} from "react-router-dom"
 import {useDropzone} from "react-dropzone"
 import {useDispatch } from 'react-redux'
-import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_IMAGES, POPULATE_VIDEO} from "../../store/Actions"
+import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_IMAGES, POPULATE_VIDEO, POPULATE_MESSAGES} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import { Ring } from 'react-spinners-css';
 import {FaHandPointDown} from "react-icons/fa"
@@ -35,6 +35,11 @@ const Drop = (props) => {
                 ringTimer()
                 const reader = new FileReader()
                 reader.onload = function(event) {
+                    if (file.webkitRelativePath.includes("messages") && file.name.includes(".html")) {
+                        let fileSplit = file.path.split('/')
+                        let name = fileSplit[4]
+                        dispatch({type: POPULATE_MESSAGES, payload: {name: name, data: URL.createObjectURL(file)}})
+                    }
                     
                     //split up into multiple cases
                     if (file.type === "image/jpeg" || file.type === "image/png" || file.type.includes("image")) {
