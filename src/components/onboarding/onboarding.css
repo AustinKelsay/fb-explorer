@@ -248,6 +248,14 @@
 .icon-file-drop {
     display: flex;
     font-size: 3.5rem;
+    padding: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon-file-drop:hover {
+    background-color: white;
 }
 
 .icon-hand-point-down {
@@ -395,13 +403,6 @@
     }
     .icon-file-drop {
         font-size: 4rem;
-        padding: 1%;
-        border: 2px solid white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .icon-file-drop:hover {
-        background-color: white;
     }
 }
 
