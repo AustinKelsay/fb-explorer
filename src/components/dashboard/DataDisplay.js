@@ -17,7 +17,12 @@ const DataDisplay = (props) => {
           const messageItem = domNode.attribs.href.split('/')
           const messageRoute = messageItem[2]
           
-          return domNode.attribs.href = messageRoute
+          return (
+            <a onClick={(e) => {
+              e.preventDefault()
+              props.history.push(messageRoute)
+            }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
+          )
         }
         if (domNode.attribs.src) {
             // Extracting the name of the photo from the src attrib

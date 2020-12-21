@@ -38,7 +38,7 @@ const Drop = (props) => {
                     if (file.webkitRelativePath.includes("messages") && file.name.includes(".html")) {
                         let fileSplit = file.path.split('/')
                         let name = fileSplit[4]
-                        dispatch({type: POPULATE_MESSAGES, payload: {name: name, data: URL.createObjectURL(file)}})
+                        dispatch({type: POPULATE_MESSAGES, payload: {name: name, data: event.target.result}})
                     }
                     
                     //split up into multiple cases
