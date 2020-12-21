@@ -6,11 +6,23 @@ import {useSelector} from "react-redux"
 const DataDisplay = (props) => {
   const images = useSelector(state => state.images)
   const video = useSelector(state => state.video)
+  const messages = useSelector(state => state.messages)
 
   const options = {
       replace: (domNode) => {
         if (!domNode.attribs) {
           return
+        }
+        if (domNode.attribs.href && domNode.attribs.href.includes('messages') && props.location.pathname.includes("/messages")) {
+          const messageItem = domNode.attribs.href.split('/')
+          const messageRoute = messageItem[2]
+          
+          return (
+            <a onClick={(e) => {
+              e.preventDefault()
+              props.history.push(messageRoute)
+            }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
+          )
         }
         if (domNode.attribs.src) {
             // Extracting the name of the photo from the src attrib

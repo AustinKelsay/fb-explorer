@@ -2,10 +2,11 @@ import React from "react";
 import Landing from "./components/onboarding/Landing"
 import Download from "./components/onboarding/Download"
 import Drop from "./components/onboarding/Drop"
+import CategoryRouter from "./components/Routing/CategoryRouter"
+import MessageRouter from "./components/Routing/MessageRouter"
 import { Route } from "react-router-dom";
 import "./App.css";
 import DataDisplay from "./components/dashboard/DataDisplay";
-import { v4 as uuidv4 } from 'uuid';
 import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";
 
@@ -21,10 +22,10 @@ const App = () => {
       <Route exact path="/categories" render={(props) => <Categories {...props} />} />
       {
               userData ?
-                  categoryData.map((category) => {
-                    const path = "/" + category.path + "/" + category.name
-                    return <Route key={uuidv4()} path={path} render={(props) => <DataDisplay {...props} data={category.data} />} />
-                  })
+                  <>
+                      <CategoryRouter />
+                      <MessageRouter />
+                  </>
               : null
             }
     </div>
