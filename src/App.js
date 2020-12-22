@@ -6,7 +6,6 @@ import CategoryRouter from "./components/Routing/CategoryRouter"
 import MessageRouter from "./components/Routing/MessageRouter"
 import { Route } from "react-router-dom";
 import "./App.css";
-import DataDisplay from "./components/dashboard/DataDisplay";
 import Categories from "./components/dashboard/Categories";
 import { useSelector } from "react-redux";
 
