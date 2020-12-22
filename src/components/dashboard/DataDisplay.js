@@ -1,6 +1,5 @@
-import React, {useState} from "react"
+import React from "react"
 import parse, {domToReact} from "html-react-parser"
-import {Alert, Button} from "react-bootstrap"
 import {useSelector} from "react-redux"
 
 const DataDisplay = (props) => {

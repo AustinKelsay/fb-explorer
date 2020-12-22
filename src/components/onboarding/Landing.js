@@ -35,8 +35,8 @@ const Landing = (props) => {
                     data-width="" 
                     data-size="large" 
                     data-button-type="login_with" 
-                    data-auto-logout-link="false" 
-                    data-use-continue-as="false">
+                    data-auto-logout-link="true" 
+                    data-use-continue-as="true">
                 </div>
                 <div className="button-container">
                     <div className="skip-container">
