@@ -29,7 +29,7 @@ const Drop = (props) => {
         props.history.push('/categories')
     }
 
-    const {acceptedFiles, getRootProps, getInputProps} = useDropzone({
+    const {getRootProps, getInputProps} = useDropzone({
         onDrop: (acceptedFiles) => {
             acceptedFiles.map((file) => {
                 ringTimer()
@@ -72,9 +72,6 @@ const Drop = (props) => {
                                 console.log(file)
                             }
                         }
-                        else {
-                            console.log(file)
-                        }
                     }
                   };
                 reader.readAsText(file);
@@ -115,7 +112,7 @@ const Drop = (props) => {
                 </div>
                 <div className="button-container-download">
                     <Link to='/' className='next-drop'>Back</Link>
-                    <Link style={!dataReady ? {opacity: '0.4', cursor: 'default'} : null} onClick={dataReady ? handleLog : null} className={dataReady ? 'glowing' : 'next-drop'}>Explore</Link>
+                    <div style={!dataReady ? {opacity: '0.4', cursor: 'default'} : null} onClick={dataReady ? handleLog : null} className={dataReady ? 'glowing' : 'next-drop'}>Explore</div>
                 </div>
             </div>
         </div>

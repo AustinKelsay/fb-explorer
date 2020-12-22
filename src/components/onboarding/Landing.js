@@ -24,14 +24,13 @@ const Landing = (props) => {
                     src={categoryScroll} 
                     poster={thumbnail} 
                     className="description-video" 
-                    poster="./media/thumbnail-fb.jpg" 
                     muted 
                     playsInline 
                     autoPlay  />
                 <h2 className="step">Step 1: Log into Facebook</h2>
                 <div  id="fb-login"
                     className="fb-login-button" 
-                    scope="public_profile"
+                    data-scope="public_profile"
                     data-width="" 
                     data-size="large" 
                     data-button-type="login_with" 

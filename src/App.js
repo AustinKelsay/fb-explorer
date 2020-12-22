@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 
 const App = () => {
   const userData = useSelector(state => state.userData)
-  const categoryData = useSelector(state => state.categories)
 
   return (
     <div className="App">
