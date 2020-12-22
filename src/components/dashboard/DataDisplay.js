@@ -5,7 +5,6 @@ import {useSelector} from "react-redux"
 const DataDisplay = (props) => {
   const images = useSelector(state => state.images)
   const video = useSelector(state => state.video)
-  const messages = useSelector(state => state.messages)
 
   const options = {
       replace: (domNode) => {
@@ -17,10 +16,13 @@ const DataDisplay = (props) => {
           const messageRoute = messageItem[2]
           
           return (
-            <a onClick={(e) => {
+            <p 
+            onClick={(e) => {
               e.preventDefault()
               props.history.push(messageRoute)
-            }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
+            }} 
+            style={{cursor: "pointer", textDecoration: "underline", color: "rgb(0, 0, 238)"}}>{domToReact(domNode.children, options)}
+            </p>
           )
         }
         if (domNode.attribs.src) {
@@ -65,11 +67,11 @@ const DataDisplay = (props) => {
           }
         if (domNode.name === "a") {
           return (
-            <a onClick={(e) => {
+            <div onClick={(e) => {
               e.preventDefault()
               let pathSplit = domNode.attribs.href.split('/')
               props.history.push(pathSplit[2])
-            }} style={{cursor: "pointer"}}>{domToReact(domNode.children, options)}</a>
+            }} style={{cursor: "pointer", textDecoration: "underline", color: "rgb(0, 0, 238)"}}>{domToReact(domNode.children, options)}</div>
           )
         }
       }

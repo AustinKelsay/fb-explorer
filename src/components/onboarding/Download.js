@@ -1,16 +1,9 @@
-import React, {useState} from "react"
+import React from "react"
 import fbDownload from "./media/fb-download.jpg"
-import {Tooltip, OverlayTrigger, ListGroup} from "react-bootstrap";
+import {ListGroup} from "react-bootstrap";
 import {Link} from "react-router-dom"
-import {FaHandPointRight} from "react-icons/fa"
 
 const Download = () => {
-
-    const renderTooltip = (props) => (
-        <Tooltip className='skip-tooltip' {...props}>
-          Already have your data?
-        </Tooltip>
-      );
 
     return (
         <div className="landing">
@@ -18,7 +11,7 @@ const Download = () => {
 
             <div className="description">
                     <h3>You will be taken to the download page where you should see what looks like the below image</h3>
-                    <img src={fbDownload} className="download-image" />
+                    <img src={fbDownload} className="download-image" alt="download example" />
                 <ListGroup>
                     <ListGroup.Item> - Choose "All of my data" and make sure the format is HTML with media quality set to high</ListGroup.Item>
                     <ListGroup.Item> - It will take a few minutes to "create" your file before you can download</ListGroup.Item>
