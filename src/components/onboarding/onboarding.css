@@ -33,6 +33,7 @@
 }
 
 .description p:last-of-type {
+    margin-top: 3%;
     text-decoration: underline;
 }
 
@@ -380,6 +381,9 @@
         margin-bottom: 6%;
         margin-top: 3%;
     }
+    .step-drop {
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px) {
@@ -499,5 +503,11 @@
     }
     .fb-login-button {
         margin: 3% auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .next-drop {
+        width: 25%;
     }
 }
