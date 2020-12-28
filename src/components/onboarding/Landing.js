@@ -17,7 +17,7 @@ const Landing = (props) => {
         <div className="landing">
             <h1 className="logo" >fbexplorer</h1>
 
-            <div className="description">
+            <div className="landing-container">
                 <h3>fbexplorer lets you reclaim, search, and explore all of your Facebook data</h3>
                 <video 
                     type="video/mp4" 
