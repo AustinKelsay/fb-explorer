@@ -344,6 +344,9 @@
     .button-container {
         margin-top: 0.5%;
     }
+    .step {
+        font-size: 1.2rem;
+    }
 }
 
 /*  Width  */
