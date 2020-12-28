@@ -87,7 +87,7 @@ const Drop = (props) => {
         <div className="landing">
             <h1 className="logo" >fbexplorer</h1>
 
-            <div className="description">
+            <div className="landing-container">
                 <p>You can now take the folder with all of your Facebook data and drop it into the file input below.</p>
                 <p>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</p>
                 <p>Your Facebook information will NEVER be stored or collected in this app.</p>
@@ -111,8 +111,8 @@ const Drop = (props) => {
                     
                 </div>
                 <div className="button-container-download">
-                    <Link to='/' className='next-drop'>Back</Link>
-                    <div style={!dataReady ? {opacity: '0.4', cursor: 'default'} : null} onClick={dataReady ? handleLog : null} className={dataReady ? 'glowing' : 'next-drop'}>Explore</div>
+                    <Link to='/' className='next-download'>Back</Link>
+                    <div style={!dataReady ? {opacity: '0.4', cursor: 'default'} : null} onClick={dataReady ? handleLog : null} className={dataReady ? 'glowing' : 'next-download'}>Explore</div>
                 </div>
             </div>
         </div>

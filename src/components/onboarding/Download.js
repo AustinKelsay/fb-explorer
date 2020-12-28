@@ -9,7 +9,7 @@ const Download = () => {
         <div className="landing">
             <h1 className="logo" >fbexplorer</h1>
 
-            <div className="description">
+            <div className="landing-container">
                     <h3>You will be taken to the download page where you should see what looks like the below image</h3>
                     <img src={fbDownload} className="download-image" alt="download example" />
                 <ListGroup>
@@ -20,8 +20,8 @@ const Download = () => {
                 <h2 className="step">Step 2: Download your Facebook data</h2>
                 <a className='download-button' href="https://www.facebook.com/dyi/?x=AdkadZSUMBkpk0EF&referrer=yfi_settings" target="_blank" rel="noopener noreferrer">Download Data</a>
                 <div className="button-container-download">
-                    <Link to='/' className='next-drop'>Back</Link>
-                    <Link to='/drop' className='next-drop'>Next</Link>
+                    <Link to='/' className='next-download'>Back</Link>
+                    <Link to='/drop' className='next-download'>Next</Link>
                 </div>
             </div>
         </div>
