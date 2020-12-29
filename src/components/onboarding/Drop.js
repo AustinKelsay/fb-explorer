@@ -5,6 +5,7 @@ import {useDispatch } from 'react-redux'
 import {GET_INDEX_HTML, POPULATE_CATEGORIES, USER_DATA, POPULATE_IMAGES, POPULATE_VIDEO, POPULATE_MESSAGES} from "../../store/Actions"
 import {FaFileUpload} from "react-icons/fa"
 import { Ring } from 'react-spinners-css';
+import {ListGroup} from "react-bootstrap";
 import {FaHandPointDown} from "react-icons/fa"
 import Zoom from 'react-reveal/Zoom';
 
@@ -88,9 +89,11 @@ const Drop = (props) => {
             <h1 className="logo" >fbexplorer</h1>
 
             <div className="landing-container">
-                <p>You can now take the folder with all of your Facebook data and drop it into the file input below.</p>
-                <p>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</p>
-                <p>Your Facebook information will NEVER be stored or collected in this app.</p>
+                <ListGroup className="list-group-drop">
+                    <ListGroup.Item>You can now take the folder with all of your Facebook data and drop it into the file input below.</ListGroup.Item>
+                    <ListGroup.Item>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</ListGroup.Item>
+                    <ListGroup.Item className="underline">Your Facebook information will NEVER be stored or collected in this app.</ListGroup.Item>
+                </ListGroup>
                 <h2 className="step-drop">Step 3: Drop your data below and start exploring!</h2>
 
                 <div className='file-drop'>
