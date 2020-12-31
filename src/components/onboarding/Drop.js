@@ -94,7 +94,7 @@ const Drop = (props) => {
                     <ListGroup.Item>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</ListGroup.Item>
                     <ListGroup.Item className="underline">Your Facebook information will NEVER be stored or collected in this app.</ListGroup.Item>
                 </ListGroup>
-                <h2 className="step-drop">Step 3: Drop your data below and start exploring!</h2>
+                <h2 className="step-drop">Step 3: Drag and drop your data below and start exploring!</h2>
 
                 <div className='file-drop'>
                 <FaHandPointDown className='icon-hand-point-down' />
