@@ -15,7 +15,7 @@ const Download = () => {
                 <ListGroup>
                     <ListGroup.Item> - Choose "All of my data" and make sure the format is HTML with media quality set to high</ListGroup.Item>
                     <ListGroup.Item> - It will take a few minutes to "create" your file before you can download</ListGroup.Item>
-                    <ListGroup.Item> - Once the file is downloaded you can keep it forever and explore it here anytime!</ListGroup.Item>
+                    <ListGroup.Item> - Once the file is downloaded extract it from it's .zip format and you can keep it forever and explore it here anytime!</ListGroup.Item>
                 </ListGroup>
                 <h2 className="step">Step 2: Download your Facebook data</h2>
                 <a className='download-button' href="https://www.facebook.com/dyi/?x=AdkadZSUMBkpk0EF&referrer=yfi_settings" target="_blank" rel="noopener noreferrer">Download Data</a>
