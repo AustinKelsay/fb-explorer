@@ -15,7 +15,7 @@ MVP:
 - [x] Get photos/videos to render correctly in the html
 - [x] Optimize preformance and fix broken img/video links
 - [x] Make the app fully responsive
-- [ ] Fix all tiny bugs, warnings, and remove unused libraries/packages
+- [x] Fix all tiny bugs, warnings, and remove unused libraries/packages
 
 Features beyond MVP:
 - [ ] Master search for values across categories
