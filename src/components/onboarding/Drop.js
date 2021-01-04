@@ -91,7 +91,7 @@ const Drop = (props) => {
             <div className="landing-container">
                 <ListGroup className="list-group-drop">
                     <ListGroup.Item>You can now take the folder with all of your Facebook data and drop it into the file input below.</ListGroup.Item>
-                    <ListGroup.Item>fbexplorer WILL render whatever Facebook data is dropped in but will NOT remember it.</ListGroup.Item>
+                    <ListGroup.Item>When you are in a specific category like "Your photos" or "Posts" hit ctrl + f to search for keywords or years to explore</ListGroup.Item>
                     <ListGroup.Item className="underline">Your Facebook information will NEVER be stored or collected in this app.</ListGroup.Item>
                 </ListGroup>
                 <h2 className="step-drop">Step 3: Drag and drop your data below and start exploring!</h2>
