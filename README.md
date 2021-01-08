@@ -4,8 +4,6 @@ fb-explorer is a web app that allows a user to log into Facebook, download their
 
 # This app does not collect or store any of your personal information or Facebook data
 
-fb-explorer is still under construction as I am working towards MVP
-
 MVP:
 - [x] User can log into facebook
 - [x] User is taken to page where they can download their data
