@@ -84,18 +84,7 @@
 }
 
 .next:hover {
-    width: 10%;
-    margin-top: 5%;
-    padding: 0.3%;
-    padding-top: 1%;
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
-    font-size: 1.2rem;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .skip-container {
@@ -196,17 +185,7 @@
 }
 
 .download-button:hover {
-    width: 10%;
-    margin: 1% auto;
-    padding: 0.3%;
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
-    font-size: 1.2rem;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .active {
@@ -250,17 +229,7 @@
 }
 
 .next-download:hover {
-    width: 10%;
-    margin-top: 5%;
-    padding: 1%;
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
-    font-size: 1.2rem;
-    border: 1px solid white;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Drop */
