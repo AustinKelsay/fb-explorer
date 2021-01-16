@@ -6,8 +6,24 @@
     align-items: center;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    cursor: pointer;
+    padding-top: 0.5%;
+    padding: 0.2%;
+}
+.about:hover {
+    text-decoration: underline;
+}
+
 .logo {
-    padding-top: 1.5%;
+    padding-top: 1%;
     font-size: 2.1rem;
     font-weight: 400;
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
@@ -70,7 +86,7 @@
 
 .next {
     width: 10%;
-    margin-top: 5%;
+    margin-top: 4%;
     padding: 0.3%;
     padding-top: 1%;
     background-color: #4b3f72;
@@ -88,7 +104,7 @@
 }
 
 .skip-container {
-    margin-top: 5%;
+    margin-top: 4%;
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -422,6 +438,9 @@
 @media (max-width: 900px) {
     .landing-container {
         width: 75%;
+    }
+    .about {
+        margin: 0.5% auto;
     }
     .description-video {
         width: 70%;

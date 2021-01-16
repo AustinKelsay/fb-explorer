@@ -15,7 +15,10 @@ const Landing = (props) => {
 
     return (
         <div className="landing">
-            <h1 className="logo" >fbexplorer</h1>
+            <div className="header">
+                <h1 className="logo" >fbexplorer</h1>
+                <p className="about">About</p>
+            </div>
 
             <div className="landing-container">
                 <h3>fbexplorer lets you reclaim, search, and explore all of your Facebook data</h3>
