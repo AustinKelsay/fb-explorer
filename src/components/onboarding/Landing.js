@@ -17,7 +17,7 @@ const Landing = (props) => {
         <div className="landing">
             <div className="header">
                 <h1 className="logo" >fbexplorer</h1>
-                <p className="about">About</p>
+                <p onClick={() => props.history.push('/about')} className="about">About</p>
             </div>
 
             <div className="landing-container">
