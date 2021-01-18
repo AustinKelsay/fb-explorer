@@ -36,6 +36,11 @@
     text-decoration: underline;
 }
 
+.logo:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .landing-container {
     background-image: linear-gradient(to bottom right, #d7d6d6, #6e54c4);
     display: flex;

@@ -16,7 +16,7 @@ const Landing = (props) => {
     return (
         <div className="landing">
             <div className="header">
-                <h1 className="logo" >fbexplorer</h1>
+                <h1 onClick={() => props.history.push('/')} className="logo" >fbexplorer</h1>
                 <p onClick={() => props.history.push('/about')} className="about">About</p>
             </div>
 

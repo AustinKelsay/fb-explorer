@@ -86,8 +86,7 @@ const Drop = (props) => {
 
     return (
         <div className="landing">
-            <h1 className="logo" >fbexplorer</h1>
-
+            <h1 onClick={() => props.history.push('/')} className="logo" >fbexplorer</h1>
             <div className="landing-container">
                 <ListGroup className="list-group-drop">
                     <ListGroup.Item>You can now take the folder with all of your Facebook data and drop it into the file input below.</ListGroup.Item>

@@ -17,7 +17,7 @@ const App = () => {
     <div className="App">
       <Route exact path="/" component={Landing} />
       <Route exact path="/about" component={About} />
-      <Route exact path='/download' component={Download} />
+      <Route exact path='/download' render={(props) => <Download {...props} /> } />
       <Route exact path='/drop' render={(props) => <Drop {...props} /> } />
       <Route exact path="/categories" render={(props) => <Categories {...props} />} />
       {

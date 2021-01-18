@@ -6,13 +6,12 @@ import categoryScroll from "./media/category-scroll.mp4"
 import thumbnail from "./media/thumbnail-fb.jpg"
 import "./onboarding.css"
 
-const About = () => {
+const About = (props) => {
 
     return (
         <div className="landing">
             <div className="header">
-                <h1 className="logo" >fbexplorer</h1>
-                <p className="about">About</p>
+                <h1 onClick={() => props.history.push('/')} className="logo" >fbexplorer</h1>
             </div>
 
             <div className="landing-container">
