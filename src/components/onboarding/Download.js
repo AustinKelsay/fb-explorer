@@ -3,12 +3,11 @@ import fbDownload from "./media/fb-download.jpg"
 import {ListGroup} from "react-bootstrap";
 import {Link} from "react-router-dom"
 
-const Download = () => {
+const Download = (props) => {
 
     return (
         <div className="landing">
-            <h1 className="logo" >fbexplorer</h1>
-
+            <h1 onClick={() => props.history.push('/')} className="logo" >fbexplorer</h1>
             <div className="landing-container">
                     <h3>You will be taken to the download page where you should see what looks like the below image</h3>
                     <img src={fbDownload} className="download-image" alt="download example" />
