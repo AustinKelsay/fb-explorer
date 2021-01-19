@@ -13,11 +13,10 @@ const About = (props) => {
             <div className="landing-container">
                 <div className="seperator">
                     <h3>fbexplorer lets you reclaim, search, and explore all of your Facebook data</h3>
-                </div>
-                <div className="seperator">
+                    <br/>
                     <h3> I'm sure many of you have seen documentaries like "The Social Dilemma" which outline how our data is farmed, sold, and used against us to increase engagement on platforms like Facebook.
                         This issue has become a focal point of interest for me as an internet user and a free thinking individual.
-                        A lot of damage has already been done to our privacy and autonomy online but I hope to empower individuals to take their data back and opt out of these predatory platforms.\
+                        A lot of damage has already been done to our privacy and autonomy online but I hope to empower individuals to take their data back and opt out of these predatory platforms.
                     </h3>
                 </div>
                 <div className="seperator">
