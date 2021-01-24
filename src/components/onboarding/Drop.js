@@ -93,7 +93,7 @@ const Drop = (props) => {
                     <ListGroup.Item>When you are in a specific category like "Your photos" or "Posts" hit ctrl + f to search for keywords or paticular years to explore</ListGroup.Item>
                     <ListGroup.Item className="underline">Your Facebook information will NEVER be stored or collected in this app.</ListGroup.Item>
                 </ListGroup>
-                <h2 className="step-drop">Step 3: Drag and drop your data below and start exploring!</h2>
+                <h2 className="step-drop">Step 3: Drag and drop your data below to start exploring</h2>
 
                 <div className='file-drop'>
                 <FaHandPointDown className='icon-hand-point-down' />

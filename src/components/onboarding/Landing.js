@@ -51,7 +51,7 @@ const Landing = (props) => {
                             <Link to='/drop' className="skip-button">Skip</Link>
                         </OverlayTrigger>
                     </div>
-                    <Link to='/download' className='next'>Next</Link>
+                    <Link to='/download' className='next'>Download your data</Link>
                 </div>
             </div>
         </div>
