@@ -15,6 +15,4 @@ MVP:
 - [x] Make the app fully responsive
 - [x] Fix all tiny bugs, warnings, and remove unused libraries/packages
 
-Features beyond MVP:
-- [ ] Master search for values across categories
-- [ ] Integrate with Blockstack Auth and Blockstack Gaia so user can save encrypt and save their data in the cloud and protect it with their personal key
+# The next evolution of this project is being built <a href='https://github.com/SelfExplore/SelfExploreApp'><strong>here</strong></a>
