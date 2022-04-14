@@ -24,16 +24,14 @@ const About = (props) => {
                     <a href='https://github.com/AustinKelsay/fb-explorer' target="_blank" rel="noopener noreferrer">Github</a>
                 </div>
                 <div className="seperator">
-                    <h3>I created this simple app as a first iteration on a larger more ambitious project to help users recliam, organize, and search all of their social media data from one dashboard</h3>
-                    <br/>
-                    <h3>I am currently looking for any cofounders/developers who are interested in this kind of product</h3>
+                    <h3>I created this simple app as a first iteration on a larger more ambitious project to help users reclaim, organize, and search all of their social media data from one dashboard</h3>
                 </div>
                 <div className="footer">
                     <h3>How to get in contact with me:</h3>
                     <div className="link-container">
                         <a href="https://github.com/AustinKelsay" target="_blank" rel="noopener noreferrer">Github</a>
                         <a href="https://austinkelsay.codes/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-                        <a href="https://twitter.com/ASeries_ofTubes" target="_blank" rel="noopener noreferrer">Twitter</a>
+                        <a href="https://twitter.com/bitcoinplebdev" target="_blank" rel="noopener noreferrer">Twitter</a>
                         <a href="https://www.linkedin.com/in/austinkelsay/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                 </div>
